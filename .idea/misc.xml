@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/project/SECURITY/app/src/main/res/drawable-v24/bg_senter_on.xml" value="0.37777777777777777" />
+        <entry key="..\:/project/SECURITY/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.2953703703703704" />
+        <entry key="..\:/project/SECURITY/app/src/main/res/drawable/bg_alert.xml" value="0.37407407407407406" />
+        <entry key="..\:/project/SECURITY/app/src/main/res/drawable/bg_barcode.xml" value="0.37407407407407406" />
+        <entry key="..\:/project/SECURITY/app/src/main/res/drawable/bg_btn_success.xml" value="0.31851851851851853" />
+        <entry key="..\:/project/SECURITY/app/src/main/res/drawable/bg_card.xml" value="0.2588628762541806" />
+        <entry key="..\:/project/SECURITY/app/src/main/res/drawable/bg_gradient.xml" value="0.2953703703703704" />
+        <entry key="..\:/project/SECURITY/app/src/main/res/drawable/bg_senter_off.xml" value="0.37777777777777777" />
+        <entry key="..\:/project/SECURITY/app/src/main/res/drawable/bg_senter_on.xml" value="0.3648148148148148" />
+        <entry key="..\:/project/SECURITY/app/src/main/res/drawable/bg_text.xml" value="0.25" />
+        <entry key="..\:/project/SECURITY/app/src/main/res/drawable/ic_close.xml" value="0.2953703703703704" />
+        <entry key="..\:/project/SECURITY/app/src/main/res/drawable/ic_edit.xml" value="0.2953703703703704" />
+        <entry key="..\:/project/SECURITY/app/src/main/res/drawable/ic_flash_on.xml" value="0.2953703703703704" />
+        <entry key="..\:/project/SECURITY/app/src/main/res/drawable/ic_launcher_background.xml" value="0.2953703703703704" />
+        <entry key="..\:/project/SECURITY/app/src/main/res/drawable/ic_logout.xml" value="0.2953703703703704" />
+        <entry key="..\:/project/SECURITY/app/src/main/res/drawable/ic_scan.xml" value="0.2953703703703704" />
+        <entry key="..\:/project/SECURITY/app/src/main/res/drawable/ic_user.xml" value="0.2953703703703704" />
+        <entry key="..\:/project/SECURITY/app/src/main/res/drawable/logo_shape.xml" value="0.25" />
+        <entry key="..\:/project/SECURITY/app/src/main/res/drawable/loign_shape.xml" value="0.2953703703703704" />
+        <entry key="..\:/project/SECURITY/app/src/main/res/drawable/lupa_password_shape.xml" value="0.25" />
+        <entry key="..\:/project/SECURITY/app/src/main/res/drawable/side_nav_bar.xml" value="0.25" />
+        <entry key="..\:/project/SECURITY/app/src/main/res/drawable/splash_background.xml" value="0.22" />
+        <entry key="..\:/project/SECURITY/app/src/main/res/drawable/splash_fg.xml" value="0.22" />
+        <entry key="..\:/project/SECURITY/app/src/main/res/layout/activity_absen_scan.xml" value="0.25" />
+        <entry key="..\:/project/SECURITY/app/src/main/res/layout/activity_daftar_shift.xml" value="0.16" />
+        <entry key="..\:/project/SECURITY/app/src/main/res/layout/activity_daftar_visitor.xml" value="0.25101351351351353" />
+        <entry key="..\:/project/SECURITY/app/src/main/res/layout/activity_daftar_visitor_berjalan.xml" value="0.12972972972972974" />
+        <entry key="..\:/project/SECURITY/app/src/main/res/layout/activity_daftar_visitor_plan.xml" value="0.25101351351351353" />
+        <entry key="..\:/project/SECURITY/app/src/main/res/layout/activity_ditail_visitor.xml" value="0.2" />
+        <entry key="..\:/project/SECURITY/app/src/main/res/layout/activity_edit_password.xml" value="0.25" />
+        <entry key="..\:/project/SECURITY/app/src/main/res/layout/activity_edit_profile.xml" value="0.25101351351351353" />
+        <entry key="..\:/project/SECURITY/app/src/main/res/layout/activity_gagal_finger.xml" value="0.25" />
+        <entry key="..\:/project/SECURITY/app/src/main/res/layout/activity_history_patrol.xml" value="0.22" />
+        <entry key="..\:/project/SECURITY/app/src/main/res/layout/activity_history_visitor.xml" value="0.14" />
+        <entry key="..\:/project/SECURITY/app/src/main/res/layout/activity_home.xml" value="0.22" />
+        <entry key="..\:/project/SECURITY/app/src/main/res/layout/activity_list_patrol.xml" value="0.25101351351351353" />
+        <entry key="..\:/project/SECURITY/app/src/main/res/layout/activity_login.xml" value="0.33" />
+        <entry key="..\:/project/SECURITY/app/src/main/res/layout/activity_main.xml" value="0.25" />
+        <entry key="..\:/project/SECURITY/app/src/main/res/layout/activity_patrol.xml" value="0.22" />
+        <entry key="..\:/project/SECURITY/app/src/main/res/layout/activity_profile.xml" value="0.2" />
+        <entry key="..\:/project/SECURITY/app/src/main/res/layout/activity_qr_location.xml" value="0.25101351351351353" />
+        <entry key="..\:/project/SECURITY/app/src/main/res/layout/activity_register.xml" value="0.22" />
+        <entry key="..\:/project/SECURITY/app/src/main/res/layout/activity_room.xml" value="0.38697916666666665" />
+        <entry key="..\:/project/SECURITY/app/src/main/res/layout/activity_scan_user_hadir.xml" value="0.38697916666666665" />
+        <entry key="..\:/project/SECURITY/app/src/main/res/layout/activity_shift_scan.xml" value="0.33" />
+        <entry key="..\:/project/SECURITY/app/src/main/res/layout/activity_skema_satu.xml" value="0.18" />
+        <entry key="..\:/project/SECURITY/app/src/main/res/layout/activity_user_late.xml" value="0.33" />
+        <entry key="..\:/project/SECURITY/app/src/main/res/layout/activity_vidio_view.xml" value="0.25101351351351353" />
+        <entry key="..\:/project/SECURITY/app/src/main/res/layout/activity_visit.xml" value="0.2" />
+        <entry key="..\:/project/SECURITY/app/src/main/res/layout/alert_visit.xml" value="0.22" />
+        <entry key="..\:/project/SECURITY/app/src/main/res/layout/card_list_patrol.xml" value="0.22" />
+        <entry key="..\:/project/SECURITY/app/src/main/res/layout/card_list_qr_location.xml" value="0.25101351351351353" />
+        <entry key="..\:/project/SECURITY/app/src/main/res/layout/card_list_shift.xml" value="0.25101351351351353" />
+        <entry key="..\:/project/SECURITY/app/src/main/res/layout/card_list_visitor.xml" value="0.25" />
+        <entry key="..\:/project/SECURITY/app/src/main/res/layout/card_scan_patrol.xml" value="0.58046875" />
+        <entry key="..\:/project/SECURITY/app/src/main/res/layout/card_user_late.xml" value="0.38697916666666665" />
+        <entry key="..\:/project/SECURITY/app/src/main/res/layout/costum_scan.xml" value="0.2" />
+        <entry key="..\:/project/SECURITY/app/src/main/res/layout/custom_alert.xml" value="0.14189189189189189" />
+        <entry key="..\:/project/SECURITY/app/src/main/res/layout/custom_alert_error.xml" value="0.38697916666666665" />
+        <entry key="..\:/project/SECURITY/app/src/main/res/layout/custom_alert_ok.xml" value="0.25" />
+        <entry key="..\:/project/SECURITY/app/src/main/res/layout/custom_alert_visitor.xml" value="0.25101351351351353" />
+        <entry key="..\:/project/SECURITY/app/src/main/res/layout/custom_snackbar.xml" value="0.25" />
+        <entry key="..\:/project/SECURITY/app/src/main/res/layout/custom_toals_error.xml" value="0.25" />
+        <entry key="..\:/project/SECURITY/app/src/main/res/layout/custom_toals_ok.xml" value="0.25" />
+        <entry key="..\:/project/SECURITY/app/src/main/res/layout/spinner_right_aligned.xml" value="0.5" />
+        <entry key="..\:/project/SECURITY/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.2588628762541806" />
+      </map>
+    </option>
+  </component>
+  <component name="ExtraIconsSettingsProject">
+    <option name="overrideIDESettings" value="true" />
+    <option name="addToIDEUserIcons" value="false" />
+    <option name="ignoredPattern" value="" />
+    <option name="additionalUIScale" value="1.0" />
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="11" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>
