@@ -6,15 +6,15 @@ package com.ringga.security.data.model.visitor
 /*     R I N G G A   S E P T I A  P R I B A D I            */
 /*=========================================================*/
 data class Data(
-    val create: Any,
+    val create: String,
     val description: String,
     val id: String,
-    val stts: Any,
+    val stts: String,
     val jadwal: String,
-    val keluar: Any,
+    val keluar: String,
     val keperluan: String,
-    val masuk: Any,
+    val masuk: String,
     val nama: String,
     val qr_code: String,
-    val update: Any
+    val update: String
 )

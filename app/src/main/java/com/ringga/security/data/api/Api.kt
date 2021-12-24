@@ -15,10 +15,9 @@ import com.ringga.security.data.model.historiPatrol.PatrolHistoryRespon
 import com.ringga.security.data.model.shift.ShiftModel
 import com.ringga.security.data.model.user_late.UserLateRespon
 import com.ringga.security.data.model.visitor.VisitorRespon
+import okhttp3.MultipartBody
 import retrofit2.Call
-import retrofit2.http.Field
-import retrofit2.http.FormUrlEncoded
-import retrofit2.http.POST
+import retrofit2.http.*
 
 interface Api {
 
@@ -202,6 +201,14 @@ interface Api {
         @Field("alasan") alasan: String,
         @Field("stts") stts: String,
     ): Call<BaseRespon>
+
+
+    @Multipart
+    @POST("UserApi/upload_image")
+    fun uploadImage(
+        @Part("id") id:Int,
+        @Part image: MultipartBody.Part
+    ):Call<BaseRespon>
 }
 
 

@@ -2,11 +2,11 @@
 
 <!--=================== T H A N K   Y O U ===================-->
 <!--============= TELAH MENGUNAKAN CODE SAYA ================-->
-			<!-- https://github.com/ringga-dev -->
+<!-- https://github.com/ringga-dev -->
 <!--=========================================================-->
 <!--     R I N G G A   S E P T I A  P R I B A D I            -->
 <!--=========================================================-->
-<LinearLayout  xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -14,93 +14,136 @@
     android:orientation="vertical"
     tools:context=".ui.scan.PatrolActivity">
 
-    <com.airbnb.lottie.LottieAnimationView
-        android:visibility="gone"
-        android:id="@+id/loading"
-        android:background="@color/white"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:paddingHorizontal="80dp"
-        app:lottie_autoPlay="true"
-        app:lottie_loop="true"
-        app:lottie_rawRes="@raw/ic_loading1"
-        tools:ignore="MissingConstraints"/>
-
-
-
-    <com.journeyapps.barcodescanner.DecoratedBarcodeView
-        android:id="@+id/barcodeView"
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="1"
-        app:zxing_scanner_layout="@layout/costum_scan">
-    </com.journeyapps.barcodescanner.DecoratedBarcodeView>
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="1"
-        android:orientation="vertical">
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:ignore="MissingConstraints">
 
-
-
-        <androidx.constraintlayout.widget.ConstraintLayout
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            android:layout_weight="1.7">
+            android:layout_weight="0.2"
+            android:orientation="vertical">
 
-            <androidx.recyclerview.widget.RecyclerView
-                android:id="@+id/rv_patrol"
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
-                tools:listitem="@layout/card_scan_patrol"
-                tools:ignore="MissingConstraints" />
+                android:layout_marginBottom="50sp"
+                android:layout_weight="0.2"
+                android:background="@drawable/bg_shape_down" />
 
-            <ImageView
-                android:id="@+id/delet_all"
-                android:layout_width="40dp"
-                android:layout_height="40dp"
-                android:layout_margin="10dp"
-                android:src="@drawable/ic_delete"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                tools:ignore="MissingConstraints" />
-        </androidx.constraintlayout.widget.ConstraintLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_marginTop="50sp"
+                android:layout_weight="0.7"
+                android:background="@drawable/bg_shape_up" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/loading"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white"
+            android:paddingHorizontal="80dp"
+            android:visibility="gone"
+            app:lottie_autoPlay="true"
+            app:lottie_loop="true"
+            app:lottie_rawRes="@raw/ic_loading1"
+            tools:ignore="MissingConstraints" />
+
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginHorizontal="10sp"
+            android:layout_marginTop="10sp"
+            android:layout_weight="1"
+            app:cardCornerRadius="20sp">
+
+            <com.journeyapps.barcodescanner.DecoratedBarcodeView
+                android:id="@+id/barcodeView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:zxing_scanner_layout="@layout/costum_scan"/>
+        </androidx.cardview.widget.CardView>
 
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            app:layout_constraintTop_toBottomOf="@id/barcodeView">
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="vertical">
 
-            <ImageView
-                android:padding="5dp"
-                android:background="@drawable/loign_shape"
-                android:src="@drawable/ic_qrcode"
-                android:layout_weight="0.08"
-                android:id="@+id/btnScanContinuous"
-                android:layout_width="40dp"
-                android:layout_height="40dp"/>
 
-            <TextView
-                android:gravity="center"
-                android:id="@+id/txtResultContinuous"
-                android:layout_weight="0.7"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:background="@drawable/bg_text"
-                android:paddingHorizontal="10dp"
-                android:text="..." />
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1.7">
 
-            <ImageView
-                android:background="@drawable/loign_shape"
-                android:layout_weight="0.3"
-                android:id="@+id/btn_kirim"
-                android:src="@drawable/ic_kirim"
-                android:clickable="true"
-                android:layout_width="40dp"
-                android:layout_height="40dp" />
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rv_patrol"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    tools:ignore="MissingConstraints"
+                    tools:listitem="@layout/card_scan_patrol" />
+
+                <ImageView
+                    android:id="@+id/delet_all"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_margin="10dp"
+                    android:src="@drawable/ic_delete"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:ignore="MissingConstraints" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintTop_toBottomOf="@id/barcodeView">
+
+                <ImageView
+                    android:id="@+id/btnScanContinuous"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_weight="0.08"
+                    android:background="@drawable/loign_shape"
+                    android:padding="5dp"
+                    android:src="@drawable/ic_qrcode" />
+
+                <TextView
+                    android:id="@+id/txtResultContinuous"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.7"
+                    android:background="@drawable/bg_text"
+                    android:gravity="center"
+                    android:paddingHorizontal="10dp"
+                    android:text="..." />
+
+                <ImageView
+                    android:id="@+id/btn_kirim"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_weight="0.3"
+                    android:background="@drawable/loign_shape"
+                    android:clickable="true"
+                    android:src="@drawable/ic_kirim" />
+            </LinearLayout>
         </LinearLayout>
     </LinearLayout>
-</LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -6,8 +6,11 @@ package com.ringga.security.util
 /*=========================================================*/
 /*     R I N G G A   S E P T I A  P R I B A D I            */
 /*=========================================================*/
+import android.content.ContentResolver
 import android.content.Context
 import android.content.Intent
+import android.net.Uri
+import android.provider.OpenableColumns
 import android.view.View
 import android.widget.Toast
 import com.google.android.material.snackbar.Snackbar
@@ -30,6 +33,19 @@ fun snackbar(text:String, view: View){
     Snackbar.make(view, text, Snackbar.LENGTH_SHORT)
         .setAction("Action", null).show()
 }
+
+fun ContentResolver.getFileName(fileUri: Uri): String {
+    var name = ""
+    val returnCursor = this.query(fileUri, null, null, null, null)
+    if (returnCursor != null) {
+        val nameIndex = returnCursor.getColumnIndex(OpenableColumns.DISPLAY_NAME)
+        returnCursor.moveToFirst()
+        name = returnCursor.getString(nameIndex)
+        returnCursor.close()
+    }
+    return name
+}
+
 
 
 

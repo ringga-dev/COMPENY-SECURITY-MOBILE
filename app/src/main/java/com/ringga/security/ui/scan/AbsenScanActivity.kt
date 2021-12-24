@@ -3,6 +3,7 @@ package com.ringga.security.ui.scan
 import android.animation.ArgbEvaluator
 import android.animation.ValueAnimator
 import android.app.AlertDialog
+import android.content.Context
 import android.graphics.Color
 import android.graphics.drawable.ColorDrawable
 import android.graphics.drawable.Drawable
@@ -27,6 +28,17 @@ import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
 import java.util.*
+import com.journeyapps.barcodescanner.ScanOptions
+
+import android.R.string.no
+import android.graphics.Camera
+import com.journeyapps.barcodescanner.camera.AutoFocusManager
+import android.R.string.no
+import com.google.zxing.integration.android.IntentIntegrator
+
+import android.R.string.no
+import com.journeyapps.barcodescanner.camera.CameraManager
+
 
 class AbsenScanActivity : AppCompatActivity() {
     lateinit var mTTS: TextToSpeech
@@ -48,12 +60,17 @@ class AbsenScanActivity : AppCompatActivity() {
                 mTTS.language = Locale("id", "ID")
             }
         })
+        barcodeView.setOnClickListener {
+            barcodeView.cameraSettings.focusMode
+        }
+
 
         captureManager = CaptureManager(this, barcodeView)
         captureManager.initializeFromIntent(intent, savedInstanceState)
 
         beepManager = BeepManager(this)
         beepManager.isVibrateEnabled = true
+        
 
         scanContinuousBG = btnScanContinuous.background
 
@@ -87,11 +104,15 @@ class AbsenScanActivity : AppCompatActivity() {
 
                                     showAlertSuccess("Qr Dalam keadaan kosong")
                                 } else {
-                                    val data_text = if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {
-                                        Html.fromHtml(response.body()?.msg, Html.FROM_HTML_MODE_COMPACT)
-                                    } else {
-                                        Html.fromHtml(response.body()?.msg)
-                                    }
+                                    val data_text =
+                                        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {
+                                            Html.fromHtml(
+                                                response.body()?.msg,
+                                                Html.FROM_HTML_MODE_COMPACT
+                                            )
+                                        } else {
+                                            Html.fromHtml(response.body()?.msg)
+                                        }
                                     //if there is text in edit text
                                     showAlertSuccess(data_text.toString())
                                     mTTS.speak(toSpeak, TextToSpeech.QUEUE_FLUSH, null)

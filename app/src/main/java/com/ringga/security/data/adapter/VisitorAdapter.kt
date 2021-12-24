@@ -1,7 +1,7 @@
 package com.ringga.security.data.adapter
 /*=================== T H A N K   Y O U ===================*/
 /*============= TELAH MENGUNAKAN CODE SAYA ================*/
-            /* https://github.com/ringga-dev */
+/* https://github.com/ringga-dev */
 /*=========================================================*/
 /*     R I N G G A   S E P T I A  P R I B A D I            */
 /*=========================================================*/
@@ -49,15 +49,14 @@ class VisitorAdapter(
 
             itemView.cart_item.setOnClickListener {
                 val i = Intent(context, DitailVisitorActivity::class.java)
-
                 i.putExtra("description", wallpaper.description)
                 i.putExtra("id", wallpaper.id)
-                i.putExtra("id_user", wallpaper.stts.toString())
+                i.putExtra("id_user", wallpaper.stts)
                 i.putExtra("jadwal", wallpaper.jadwal)
-                i.putExtra("keluar", wallpaper.keluar.toString())
+                i.putExtra("keluar", wallpaper.keluar)
                 i.putExtra("keperluan", wallpaper.keperluan)
                 i.putExtra("nama", wallpaper.nama)
-                i.putExtra("masuk", wallpaper.masuk.toString())
+                i.putExtra("masuk", wallpaper.masuk)
                 context.startActivity(i)
             }
         }
