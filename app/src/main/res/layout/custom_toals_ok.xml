@@ -25,11 +25,11 @@
             app:lottie_rawRes="@raw/success" />
         <TextView
             android:id="@+id/tv_text"
-            android:fontFamily="@font/may_lova_regular"
+            android:fontFamily="@font/neon"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textSize="20sp"
-            android:textColor="#20FF08"
+            android:textColor="#000000"
             android:textStyle="bold"
             android:text="Wellcome to Etowa Mobile"
             android:gravity="center"/>

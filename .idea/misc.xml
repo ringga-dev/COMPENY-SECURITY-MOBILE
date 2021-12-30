@@ -49,13 +49,14 @@
         <entry key="..\:/project/SECURITY/app/src/main/res/layout/activity_qr_location.xml" value="0.25101351351351353" />
         <entry key="..\:/project/SECURITY/app/src/main/res/layout/activity_register.xml" value="0.22" />
         <entry key="..\:/project/SECURITY/app/src/main/res/layout/activity_room.xml" value="0.38697916666666665" />
+        <entry key="..\:/project/SECURITY/app/src/main/res/layout/activity_scan_login.xml" value="0.38697916666666665" />
         <entry key="..\:/project/SECURITY/app/src/main/res/layout/activity_scan_user_hadir.xml" value="0.38697916666666665" />
         <entry key="..\:/project/SECURITY/app/src/main/res/layout/activity_shift_scan.xml" value="0.33" />
         <entry key="..\:/project/SECURITY/app/src/main/res/layout/activity_skema_satu.xml" value="0.18" />
         <entry key="..\:/project/SECURITY/app/src/main/res/layout/activity_user_late.xml" value="0.33" />
         <entry key="..\:/project/SECURITY/app/src/main/res/layout/activity_vidio_view.xml" value="0.25101351351351353" />
         <entry key="..\:/project/SECURITY/app/src/main/res/layout/activity_visit.xml" value="0.2" />
-        <entry key="..\:/project/SECURITY/app/src/main/res/layout/alert_visit.xml" value="0.22" />
+        <entry key="..\:/project/SECURITY/app/src/main/res/layout/alert_visit.xml" value="0.33" />
         <entry key="..\:/project/SECURITY/app/src/main/res/layout/card_list_patrol.xml" value="0.22" />
         <entry key="..\:/project/SECURITY/app/src/main/res/layout/card_list_qr_location.xml" value="0.25101351351351353" />
         <entry key="..\:/project/SECURITY/app/src/main/res/layout/card_list_shift.xml" value="0.25101351351351353" />

@@ -26,9 +26,13 @@ import android.widget.Toast
 import androidx.cardview.widget.CardView
 import androidx.core.app.ActivityCompat
 import com.ringga.security.R
+import com.ringga.security.data.api.RetrofitClient
+import com.ringga.security.data.model.auth.BaseRespon
 import com.ringga.security.data.model.patrol.ScanPatrol
+import com.ringga.security.database.PreferencesToken
 import com.ringga.security.database.PreferencesToken.Companion.getToken
 import com.ringga.security.database.SharedPrefManager
+import com.ringga.security.ui.auth.LoginActivity
 import com.ringga.security.ui.history.*
 import com.ringga.security.ui.patrol.ListPatrolActivity
 import com.ringga.security.ui.profile.EditProfileActivity
@@ -36,6 +40,9 @@ import com.ringga.security.ui.profile.ProfileActivity
 import com.ringga.security.ui.scan.*
 import com.ringga.security.ui.ui_user.UserLateActivity
 import kotlinx.android.synthetic.main.activity_home.*
+import retrofit2.Call
+import retrofit2.Callback
+import retrofit2.Response
 import java.util.ArrayList
 
 class HomeActivity : AppCompatActivity() {
@@ -353,6 +360,15 @@ class HomeActivity : AppCompatActivity() {
             layar1.visibility =View.GONE
             layar2.visibility =View.GONE
             layar3.visibility =View.GONE
+        }
+    }
+
+    override fun onResume() {
+        super.onResume()
+
+        if (!SharedPrefManager.getInstance(this)!!.isLoggedIn) {
+            startActivity(Intent(baseContext, LoginActivity::class.java))
+            finish()
         }
     }
 

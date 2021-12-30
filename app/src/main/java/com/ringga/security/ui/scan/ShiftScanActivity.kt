@@ -104,7 +104,9 @@ class ShiftScanActivity : AppCompatActivity() {
                             }
 
                         })
-
+                    scanContinuousState = !scanContinuousState
+                    btnScanContinuous.background = scanContinuousBG
+                    barcodeView.barcodeView.stopDecoding()
                     animateBackground()
                 }
             }

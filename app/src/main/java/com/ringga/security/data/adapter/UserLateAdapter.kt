@@ -45,7 +45,7 @@ class UserLateAdapter(
         fun bind(wallpaper: Data, context: Context) {
 
             itemView.tv_date.text = "KEDATANGAN : ${wallpaper.date}"
-            itemView.tv_shift.text = "${wallpaper.shift}"
+            itemView.tv_shift.text = "${wallpaper.name}"
             itemView.tv_masuk.text = "Masuk ${wallpaper.masuk} WIB"
             itemView.tv_telat.text = "TERLAMBAT : ${wallpaper.terlambat}"
             if (wallpaper.stts == "2"){

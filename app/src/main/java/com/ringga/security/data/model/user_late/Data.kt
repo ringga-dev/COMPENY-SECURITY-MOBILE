@@ -6,6 +6,7 @@ package com.ringga.security.data.model.user_late
 /*     R I N G G A   S E P T I A  P R I B A D I            */
 /*=========================================================*/
 data class Data(
+    val name: String,
     val date: String,
     val masuk: String,
     val shift: String,

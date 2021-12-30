@@ -47,18 +47,18 @@ class VisitorAdapter(
             itemView.tv_keperluan.text = "keperluan :" + wallpaper.keperluan
             itemView.tv_description.text = wallpaper.description
 
-            itemView.cart_item.setOnClickListener {
-                val i = Intent(context, DitailVisitorActivity::class.java)
-                i.putExtra("description", wallpaper.description)
-                i.putExtra("id", wallpaper.id)
-                i.putExtra("id_user", wallpaper.stts)
-                i.putExtra("jadwal", wallpaper.jadwal)
-                i.putExtra("keluar", wallpaper.keluar)
-                i.putExtra("keperluan", wallpaper.keperluan)
-                i.putExtra("nama", wallpaper.nama)
-                i.putExtra("masuk", wallpaper.masuk)
-                context.startActivity(i)
-            }
+//            itemView.cart_item.setOnClickListener {
+//                val i = Intent(context, DitailVisitorActivity::class.java)
+//                i.putExtra("description", wallpaper.description)
+//                i.putExtra("id", wallpaper.id)
+//                i.putExtra("id_user", wallpaper.stts)
+//                i.putExtra("jadwal", wallpaper.jadwal)
+//                i.putExtra("keluar", wallpaper.keluar)
+//                i.putExtra("keperluan", wallpaper.keperluan)
+//                i.putExtra("nama", wallpaper.nama)
+//                i.putExtra("masuk", wallpaper.masuk)
+//                context.startActivity(i)
+//            }
         }
     }
 }

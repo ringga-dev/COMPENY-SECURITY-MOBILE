@@ -52,7 +52,6 @@ class DaftarShiftActivity : AppCompatActivity() {
                     }else{
                         Toast.makeText(this@DaftarShiftActivity, response.body()?.msg, Toast.LENGTH_SHORT).show()
                     }
-
                 }
 
                 override fun onFailure(call: Call<ShiftModel>, t: Throwable) {

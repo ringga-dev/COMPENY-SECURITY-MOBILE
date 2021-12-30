@@ -90,6 +90,7 @@ class VisitActivity : AppCompatActivity() {
 
                                         if (response.body()?.stts == true) {
                                             showAlertSuccess(response.body()!!.msg)
+
                                         } else {
                                             showAlertError(response.body()!!.msg)
                                         }
@@ -174,6 +175,9 @@ class VisitActivity : AppCompatActivity() {
             dialog.dismiss()
         }
         dialog.show()
+        scanContinuousState = !scanContinuousState
+        btnScanContinuous.background = scanContinuousBG
+        barcodeView.barcodeView.stopDecoding()
     }
 
     private fun showAlertError(text: String) {
@@ -192,6 +196,9 @@ class VisitActivity : AppCompatActivity() {
             dialog.dismiss()
         }
         dialog.show()
+        scanContinuousState = !scanContinuousState
+        btnScanContinuous.background = scanContinuousBG
+        barcodeView.barcodeView.stopDecoding()
     }
 
 

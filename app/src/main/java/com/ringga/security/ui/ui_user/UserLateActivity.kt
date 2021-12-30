@@ -75,7 +75,7 @@ class UserLateActivity : AppCompatActivity() {
         RetrofitClient.instance.late_user(
             PreferencesToken.getToken(this)!!,
             myProfile?.id.toString(),
-            myProfile?.id_bet!!,
+            "all",
             tgl
         )
             .enqueue(object : Callback<UserLateRespon> {

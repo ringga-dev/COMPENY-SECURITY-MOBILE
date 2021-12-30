@@ -26,6 +26,8 @@ import com.ringga.security.R
 import com.ringga.security.data.api.RetrofitClient
 import com.ringga.security.data.model.auth.BaseRespon
 import com.ringga.security.data.model.auth.LoginRespon
+import com.ringga.security.database.PreferencesToken.Companion.ClearToken
+import com.ringga.security.database.PreferencesToken.Companion.getToken
 import com.ringga.security.database.PreferencesToken.Companion.setToken
 import com.ringga.security.database.PreferencesTokenFirebase
 import com.ringga.security.database.SharedPrefManager
@@ -168,40 +170,42 @@ class LoginActivity : AppCompatActivity() {
         custom_toast.show()
     }
 
-//    override fun onStart() {
-//        super.onStart()
-//
-//        if (SharedPrefManager.getInstance(this)!!.isLoggedIn) {
-//            RetrofitClient.instance.cekTokenApp(getToken(this)!!)
-//                .enqueue(object : Callback<BaseRespon>{
-//                    override fun onResponse(
-//                        call: Call<BaseRespon>,
-//                        response: Response<BaseRespon>
-//                    ) {
-//                      if (response.body()?.stts == true){
-//                          val intent = Intent(applicationContext, HomeActivity::class.java)
-//                          intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
-//
-//                          startActivity(intent)
-//                          finish()
-//                      }else{
-//                          Toast.makeText(this@LoginActivity, response.body()?.msg, Toast.LENGTH_SHORT).show()
-//                          SharedPrefManager.getInstance(this@LoginActivity)!!.clear()
-//                          ClearToken(this@LoginActivity)
-//                          startActivity(Intent(baseContext, LoginActivity::class.java))
-//                          finish()
-//                      }
-//                    }
-//
-//                    override fun onFailure(call: Call<BaseRespon>, t: Throwable) {
-//                        Toast.makeText(this@LoginActivity, t.message, Toast.LENGTH_SHORT).show()
-//                    }
-//
-//                })
-//
-//
-//        }
-//    }
+
+
+    override fun onStart() {
+        super.onStart()
+
+        if (SharedPrefManager.getInstance(this)!!.isLoggedIn) {
+            RetrofitClient.instance.cekTokenApp(getToken(this)!!)
+                .enqueue(object : Callback<BaseRespon>{
+                    override fun onResponse(
+                        call: Call<BaseRespon>,
+                        response: Response<BaseRespon>
+                    ) {
+                      if (response.body()?.stts == true){
+                          val intent = Intent(applicationContext, HomeActivity::class.java)
+                          intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
+
+                          startActivity(intent)
+                          finish()
+                      }else{
+                          Toast.makeText(this@LoginActivity, response.body()?.msg, Toast.LENGTH_SHORT).show()
+                          SharedPrefManager.getInstance(this@LoginActivity)!!.clear()
+                          ClearToken(this@LoginActivity)
+                          startActivity(Intent(baseContext, LoginActivity::class.java))
+                          finish()
+                      }
+                    }
+
+                    override fun onFailure(call: Call<BaseRespon>, t: Throwable) {
+                        Toast.makeText(this@LoginActivity, t.message, Toast.LENGTH_SHORT).show()
+                    }
+
+                })
+
+
+        }
+    }
 
     private fun tokenCek(): String? {
         var tokencek: String? = null

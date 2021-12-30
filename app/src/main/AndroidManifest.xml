@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     package="com.ringga.security">
 
     <uses-permission android:name="android.permission.INTERNET" />
@@ -22,95 +23,130 @@
         android:theme="@style/Theme.SECURITY"
         android:usesCleartextTraffic="true">
         <activity
+            android:name=".ui.scan.ScanLoginActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            tools:ignore="LockedOrientationActivity" />
+        <activity
             android:name=".ui.scan.AbsenScanActivity"
+            android:screenOrientation="portrait"
+            tools:ignore="LockedOrientationActivity"
             android:exported="false" />
         <activity
             android:name=".ui.scan.GagalFingerActivity"
+            android:screenOrientation="portrait"
+            tools:ignore="LockedOrientationActivity"
             android:exported="false" />
         <activity
             android:name=".ui.undian.ScanUserHadirActivity"
+            android:screenOrientation="portrait"
+            tools:ignore="LockedOrientationActivity"
             android:exported="false" />
         <activity
             android:name=".ui.ui_user.UserLateActivity"
+            android:screenOrientation="portrait"
+            tools:ignore="LockedOrientationActivity"
             android:exported="false" />
         <activity
             android:name=".ui.scan.ShiftScanActivity"
+            android:screenOrientation="portrait"
+            tools:ignore="LockedOrientationActivity"
             android:exported="false" />
         <activity
             android:name=".ui.history.DaftarShiftActivity"
+            android:screenOrientation="portrait"
+            tools:ignore="LockedOrientationActivity"
             android:exported="false" />
         <activity
             android:name=".ui.skema.VidioViewActivity"
             android:exported="false"
+            tools:ignore="LockedOrientationActivity"
             android:screenOrientation="portrait" />
         <activity
             android:name=".ui.history.DaftarVisitorPlanActivity"
             android:exported="false"
+            tools:ignore="LockedOrientationActivity"
             android:screenOrientation="portrait" />
         <activity
             android:name=".ui.history.DaftarVisitorBerjalanActivity"
             android:exported="false"
+            tools:ignore="LockedOrientationActivity"
             android:screenOrientation="portrait" />
         <activity
             android:name=".ui.patrol.ListPatrolActivity"
             android:exported="false"
+            tools:ignore="LockedOrientationActivity"
             android:screenOrientation="portrait" />
         <activity
             android:name=".ui.history.DitailVisitorActivity"
             android:exported="false"
+            tools:ignore="LockedOrientationActivity"
             android:screenOrientation="portrait" />
         <activity
             android:name=".ui.history.DaftarVisitorActivity"
             android:exported="false"
+            tools:ignore="LockedOrientationActivity"
             android:screenOrientation="portrait" />
         <activity
             android:name=".ui.skema.QrLocationActivity"
             android:exported="false"
+            tools:ignore="LockedOrientationActivity"
             android:screenOrientation="portrait" />
         <activity
             android:name=".ui.profile.EditPasswordActivity"
             android:exported="false"
+            tools:ignore="LockedOrientationActivity"
             android:screenOrientation="portrait" />
         <activity
             android:name=".ui.profile.EditProfileActivity"
             android:exported="false"
+            tools:ignore="LockedOrientationActivity"
             android:screenOrientation="portrait" />
         <activity
             android:name=".ui.skema.SkemaSatuActivity"
             android:exported="true"
-            android:screenOrientation="landscape" />
+            tools:ignore="LockedOrientationActivity"
+            android:screenOrientation="portrait" />
         <activity
             android:name=".ui.scan.HistoryVisitorActivity"
             android:exported="true"
+            tools:ignore="LockedOrientationActivity"
             android:screenOrientation="portrait" />
         <activity
             android:name=".ui.history.HistoryPatrolActivity"
             android:exported="true"
+            tools:ignore="LockedOrientationActivity"
             android:screenOrientation="portrait" />
         <activity
             android:name=".ui.profile.ProfileActivity"
             android:exported="true"
+            tools:ignore="LockedOrientationActivity"
             android:screenOrientation="portrait" />
         <activity
             android:name=".ui.scan.PatrolActivity"
             android:exported="true"
+            tools:ignore="LockedOrientationActivity"
             android:screenOrientation="portrait" />
         <activity
             android:name=".ui.scan.VisitActivity"
             android:exported="true"
+            tools:ignore="LockedOrientationActivity"
             android:screenOrientation="portrait" />
         <activity
             android:name=".ui.home.HomeActivity"
             android:exported="true"
+            tools:ignore="LockedOrientationActivity"
             android:screenOrientation="portrait" />
         <activity
             android:name=".ui.auth.RegisterActivity"
             android:exported="true"
-            android:screenOrientation="portrait" />
+            android:screenOrientation="portrait"
+            tools:ignore="LockedOrientationActivity" />
         <activity
             android:name=".ui.auth.LoginActivity"
             android:exported="true"
-            android:screenOrientation="portrait" />
+            android:screenOrientation="portrait"
+            tools:ignore="LockedOrientationActivity" />
         <activity
             android:name=".MainActivity"
             android:exported="true">

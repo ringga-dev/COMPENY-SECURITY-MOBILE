@@ -179,7 +179,7 @@ class GagalFingerActivity : AppCompatActivity() {
                 ) {
                     if (response.body()?.stts == true) {
                         v_ditail.visibility = View.VISIBLE
-                        barcodeView.visibility = View.GONE
+                        v_tampilan.visibility = View.GONE
                         v_scan.visibility = View.VISIBLE
 
                         tv_nama.text = response.body()?.data?.name

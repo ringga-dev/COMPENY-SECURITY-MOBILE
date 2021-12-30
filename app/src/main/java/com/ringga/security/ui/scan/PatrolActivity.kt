@@ -77,6 +77,15 @@ class PatrolActivity : AppCompatActivity() {
             btn_kirim.setBackgroundResource(R.drawable.bg_senter_on)
             btn_kirim.visibility = View.GONE
             loading.visibility = View.VISIBLE
+
+            if (keranjang.count() < 1) {
+                showToalsError("Belum ada data Yang di scan...!")
+                showToalsError("Scan Belum Di Lakukan")
+                loading.visibility = View.GONE
+                btn_kirim.visibility = View.VISIBLE
+                btn_kirim.setBackgroundResource(R.drawable.bg_senter_off)
+                return@setOnClickListener
+            }
             scan_post()
         }
         captureManager = CaptureManager(this, barcodeView)
@@ -222,7 +231,9 @@ class PatrolActivity : AppCompatActivity() {
         val db = DBHelper(this, null)
         val cursor = db.getName()
 
-        if (keranjang.count() == cursor?.count) {
+
+
+        if (keranjang.count() == cursor?.count ) {
             keranjang.forEach { data ->
                 RetrofitClient.instance.addpatrol(
                     getToken(this)!!,

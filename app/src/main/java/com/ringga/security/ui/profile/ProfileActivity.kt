@@ -284,7 +284,7 @@ class ProfileActivity : AppCompatActivity() {
                 DialogInterface.OnClickListener { dialogInterface, i ->
                     SharedPrefManager.getInstance(this)!!.clear()
                     startActivity(Intent(baseContext, LoginActivity::class.java))
-                    finish()
+                    this.finish()
                 })
             .setNegativeButton(
                 "Tidak Terimakasih",

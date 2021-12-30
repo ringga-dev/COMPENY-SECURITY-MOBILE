@@ -27,9 +27,6 @@ import com.ringga.security.data.model.auth.BaseRespon
 import com.ringga.security.database.PreferencesToken
 import com.ringga.security.database.SharedPrefManager
 import kotlinx.android.synthetic.main.activity_history_visitor.*
-import kotlinx.android.synthetic.main.activity_visit.barcodeView
-import kotlinx.android.synthetic.main.activity_visit.btnScanContinuous
-import kotlinx.android.synthetic.main.activity_visit.txtResultContinuous
 import kotlinx.android.synthetic.main.costum_scan.*
 import retrofit2.Call
 import retrofit2.Callback
@@ -71,7 +68,7 @@ class HistoryVisitorActivity : AppCompatActivity() {
         }
 
         btn_set.setOnClickListener {
-            barcodeView.visibility = View.VISIBLE
+            viewScan.visibility = View.VISIBLE
             v_scan.visibility = View.VISIBLE
         }
 
@@ -215,6 +212,9 @@ class HistoryVisitorActivity : AppCompatActivity() {
                     }
                 })
         }
+        scanContinuousState = !scanContinuousState
+        btnScanContinuous.background = scanContinuousBG
+        barcodeView.barcodeView.stopDecoding()
     }
 
     override fun onPause() {
