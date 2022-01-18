@@ -48,22 +48,8 @@ This project is mantained by:
 
   <img src="image_etowa/WhatsApp Image 2022-01-18 at 9.32.45 AM (1).jpeg" width="350" alt="accessibility text">
   <img src="image_etowa/WhatsApp Image 2022-01-18 at 9.32.45 AM.jpeg" width="350" alt="accessibility text">
-  <img src="image_etowa/WhatsApp Image 2022-01-18 at 9.32.46 AM (1).jpeg" width="350" alt="accessibility text">
-  <img src="WhatsApp Image 2022-01-18 at 9.32.46 AM.jpeg" width="350" alt="accessibility text">
+  <img src="image_etowa/1.PNG" width="350" alt="accessibility text">
+  <img src="image_etowa/WhatsApp Image 2022-01-18 at 9.32.46 AM.jpeg" width="350" alt="accessibility text">
   <img src="image_etowa/WhatsApp Image 2021-12-15 at 15.53.15 (1).jpeg" width="350" alt="accessibility text">
   <img src="image_etowa/WhatsApp Image 2022-01-18 at 9.32.47 AM (1).jpeg" width="350" alt="accessibility text">
-  <img src="image_etowa/WhatsApp Image 2022-01-18 at 9.32.47 AM (2).jpeg" width="350" alt="accessibility text">
-  <img src="image_etowa/WhatsApp Image 2022-01-18 at 9.32.47 AM.jpeg" width="350" alt="accessibility text">
-  <img src="image_etowa/WhatsApp Image 2021-12-15 at 15.53.16 (2).jpeg" width="350" alt="accessibility text">
-  <img src="image_etowa/WhatsApp Image 2021-12-15 at 15.53.16.jpeg" width="350" alt="accessibility text">
-  <img src="image_etowa/WhatsApp Image 2021-12-15 at 15.53.18 (1).jpeg" width="350" alt="accessibility text">
-  <img src="image_etowa/WhatsApp Image 2021-12-15 at 15.53.18.jpeg" width="350" alt="accessibility text">
-  <img src="image_etowa/WhatsApp Image 2021-12-15 at 15.53.19 (1).jpeg" width="350" alt="accessibility text">
-  <img src="image_etowa/WhatsApp Image 2021-12-15 at 15.53.19.jpeg" width="350" alt="accessibility text">
-  <img src="image_etowa/WhatsApp Image 2021-12-15 at 15.53.20.jpeg" width="350" alt="accessibility text">
-  <img src="image_etowa/WhatsApp Image 2021-12-15 at 15.53.35 (1).jpeg" width="350" alt="accessibility text">
-  <img src="image_etowa/WhatsApp Image 2021-12-15 at 15.53.35 (2).jpeg" width="350" alt="accessibility text">
-  <img src="image_etowa/WhatsApp Image 2021-12-15 at 15.53.35.jpeg" width="350" alt="accessibility text">
-  <img src="image_etowa/WhatsApp Image 2021-12-15 at 15.53.36.jpeg" width="350" alt="accessibility text">
-  <img src="image_etowa/WhatsApp Image 2021-12-15 at 15.53.37 (1).jpeg" width="350" alt="accessibility text">
-  <img src="image_etowa/WhatsApp Image 2021-12-15 at 15.53.37.jpeg" width="350" alt="accessibility text">
+
