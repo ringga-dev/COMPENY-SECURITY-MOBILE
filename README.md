@@ -46,14 +46,14 @@ This project is mantained by:
 5. Push your branch (git push origin my-new-feature)
 6. Create a new Pull Request
 
-  <img src="image_etowa/WhatsApp Image 2021-12-15 at 15.53.13.jpeg" width="350" alt="accessibility text">
-  <img src="image_etowa/WhatsApp Image 2021-12-15 at 15.53.14 (1).jpeg" width="350" alt="accessibility text">
-  <img src="image_etowa/WhatsApp Image 2021-12-15 at 15.53.14 (2).jpeg" width="350" alt="accessibility text">
-  <img src="image_etowa/WhatsApp Image 2021-12-15 at 15.53.14.jpeg" width="350" alt="accessibility text">
+  <img src="image_etowa/WhatsApp Image 2022-01-18 at 9.32.45 AM (1).jpeg" width="350" alt="accessibility text">
+  <img src="image_etowa/WhatsApp Image 2022-01-18 at 9.32.45 AM.jpeg" width="350" alt="accessibility text">
+  <img src="image_etowa/WhatsApp Image 2022-01-18 at 9.32.46 AM (1).jpeg" width="350" alt="accessibility text">
+  <img src="WhatsApp Image 2022-01-18 at 9.32.46 AM.jpeg" width="350" alt="accessibility text">
   <img src="image_etowa/WhatsApp Image 2021-12-15 at 15.53.15 (1).jpeg" width="350" alt="accessibility text">
-  <img src="image_etowa/WhatsApp Image 2021-12-15 at 15.53.15 (2).jpeg" width="350" alt="accessibility text">
-  <img src="image_etowa/WhatsApp Image 2021-12-15 at 15.53.15.jpeg" width="350" alt="accessibility text">
-  <img src="image_etowa/WhatsApp Image 2021-12-15 at 15.53.16 (1).jpeg" width="350" alt="accessibility text">
+  <img src="image_etowa/WhatsApp Image 2022-01-18 at 9.32.47 AM (1).jpeg" width="350" alt="accessibility text">
+  <img src="image_etowa/WhatsApp Image 2022-01-18 at 9.32.47 AM (2).jpeg" width="350" alt="accessibility text">
+  <img src="image_etowa/WhatsApp Image 2022-01-18 at 9.32.47 AM.jpeg" width="350" alt="accessibility text">
   <img src="image_etowa/WhatsApp Image 2021-12-15 at 15.53.16 (2).jpeg" width="350" alt="accessibility text">
   <img src="image_etowa/WhatsApp Image 2021-12-15 at 15.53.16.jpeg" width="350" alt="accessibility text">
   <img src="image_etowa/WhatsApp Image 2021-12-15 at 15.53.18 (1).jpeg" width="350" alt="accessibility text">
