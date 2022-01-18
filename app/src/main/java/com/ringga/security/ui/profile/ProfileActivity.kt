@@ -43,10 +43,16 @@ import java.io.IOException
 import java.text.SimpleDateFormat
 import java.util.*
 import android.R.attr.data
+import android.content.IntentSender
 import android.graphics.Canvas
+import android.provider.Settings
 
 import androidx.documentfile.provider.DocumentFile
 import coil.api.load
+import com.google.android.gms.common.api.ApiException
+import com.google.android.gms.common.api.ResolvableApiException
+import com.google.android.gms.location.*
+import com.google.android.gms.tasks.Task
 import com.ringga.security.data.api.RetrofitClient.BASE_URL
 import com.ringga.security.util.getFileName
 
@@ -86,6 +92,7 @@ class ProfileActivity : AppCompatActivity() {
         chage_image.setOnClickListener {
             showPictureDialog()
         }
+        showSettingAlert()
     }
 
 
@@ -295,4 +302,21 @@ class ProfileActivity : AppCompatActivity() {
 
         dialog.getButton(AlertDialog.BUTTON_POSITIVE).setTextColor(Color.RED)
     }
+
+    private fun showSettingAlert() {
+        val alertDialog = AlertDialog.Builder(this)
+        alertDialog.setTitle("GPS setting!")
+        alertDialog.setMessage("GPS is not enabled, Do you want to go to settings menu? ")
+        alertDialog.setPositiveButton(
+            "Setting"
+        ) { dialog, which ->
+            val intent = Intent(Settings.ACTION_LOCATION_SOURCE_SETTINGS)
+            this.startActivity(intent)
+        }
+        alertDialog.setNegativeButton(
+            "Cancel"
+        ) { dialog, which -> dialog.cancel() }
+        alertDialog.show()
+    }
+
 }

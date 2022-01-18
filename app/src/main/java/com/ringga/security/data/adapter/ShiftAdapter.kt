@@ -29,6 +29,11 @@ class ShiftAdapter(
     private var context: Context
 ) : RecyclerView.Adapter<ShiftAdapter.ViewHolder>() {
 
+
+    /**
+     * file ini berfungsi untuk menampilkan data shift dari server
+     * */
+
     fun setWallpapers(r: List<Data>) {
         wallpaper.clear()
         wallpaper.addAll(r)
@@ -57,7 +62,9 @@ class ShiftAdapter(
             itemView.tv_m_rest.text = "Mulai Istirahat :  Pukul ${wallpaper.m_rest} WIB"
             itemView.tv_s_rest.text = "Selesai Istirahat:  Pukul ${wallpaper.s_rest} WIB"
 
-
+            /**
+             * fungsi klik pada card
+             * */
             itemView.cart_item.setOnClickListener {
                 val edittext = EditText(context)
                 edittext.hint = "Masukkan Alasan User?"

@@ -21,12 +21,18 @@ class PatrolHistoryAdapter(
     private var context: Context
 ) : RecyclerView.Adapter<PatrolHistoryAdapter.ViewHolder>() {
 
+    /**
+     * file ini berfungsi untuk menampilkan data patroli yang sudah di lakukan user
+     * */
     fun setWallpapers(r: List<Data>) {
         wallpaper.clear()
         wallpaper.addAll(r)
         notifyDataSetChanged()
     }
 
+    /**
+     * membagun ui
+     * */
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         return ViewHolder(
             LayoutInflater.from(parent.context)

@@ -1,71 +1,86 @@
 package com.ringga.security.ui.skema
 /*=================== T H A N K   Y O U ===================*/
 /*============= TELAH MENGUNAKAN CODE SAYA ================*/
-            /* https://github.com/ringga-dev */
+/* https://github.com/ringga-dev */
 /*=========================================================*/
 /*     R I N G G A   S E P T I A  P R I B A D I            */
 /*=========================================================*/
-import android.app.Dialog
-import android.graphics.Color
-import android.net.Uri
+
+import android.content.Context
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
+
 import com.ringga.security.R
-import com.devbrackets.android.exomedia.listener.OnPreparedListener
+
+import es.voghdev.pdfviewpager.library.adapter.PDFPagerAdapter
+
+import es.voghdev.pdfviewpager.library.RemotePDFViewPager
+
+import androidx.constraintlayout.widget.ConstraintLayout
+import es.voghdev.pdfviewpager.library.remote.DownloadFile
+import java.lang.Exception
+import es.voghdev.pdfviewpager.library.util.FileUtil
 import com.ringga.security.data.api.RetrofitClient.BASE_URL
-import kotlinx.android.synthetic.main.activity_vidio_view.*
 
 
-class VidioViewActivity : AppCompatActivity() {
+class VidioViewActivity : AppCompatActivity(), DownloadFile.Listener {
+
+
+    var root: ConstraintLayout? = null
+    var remotePDFViewPager: RemotePDFViewPager? = null
+    var adapter: PDFPagerAdapter? = null
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_vidio_view)
-        setupVideoView()
+        root = findViewById(R.id.remote_pdf_root);
 
-        hideSystemUI()
+        setDownloadButtonListener();
 
-        video_view.setOnPreparedListener(OnPreparedListener { video_view.start() })
-        video_view.setOnClickListener {
-            window?.statusBarColor = Color.TRANSPARENT
+    }
+
+    override fun onDestroy() {
+        super.onDestroy()
+        if (adapter != null) {
+            adapter!!.close()
         }
     }
 
-    private fun setupVideoView() {
-        // Make sure to use the correct VideoView import
-        video_view!!.setOnPreparedListener(OnPreparedListener { this })
+    protected fun setDownloadButtonListener() {
 
-        //For now we just picked an arbitrary item to play
-        video_view!!.setVideoURI(Uri.parse(BASE_URL + "assets/vidio/tutor.mp4" ))
+        val ctx: Context = this
+        val listener: DownloadFile.Listener = this
+
+        remotePDFViewPager = RemotePDFViewPager(ctx, getUrlFromEditText(), listener)
+        remotePDFViewPager!!.id = R.id.pdfViewPager
+
+
     }
 
-    override fun onPrepareDialog(id: Int, dialog: Dialog?) {
-        super.onPrepareDialog(id, dialog)
-        video_view!!.start()
+    protected fun getUrlFromEditText(): String {
+        return "$BASE_URL" + "assets/pdf/tutor.pdf"
     }
 
 
-    private fun hideSystemUI() {
-        // Enables regular immersive mode.
-        // For "lean back" mode, remove SYSTEM_UI_FLAG_IMMERSIVE.
-        // Or for "sticky immersive," replace it with SYSTEM_UI_FLAG_IMMERSIVE_STICKY
-        window.decorView.systemUiVisibility = (View.SYSTEM_UI_FLAG_IMMERSIVE
-                // Set the content to appear under the system bars so that the
-                // content doesn't resize when the system bars hide and show.
-                or View.SYSTEM_UI_FLAG_LAYOUT_STABLE
-                or View.SYSTEM_UI_FLAG_LAYOUT_HIDE_NAVIGATION
-                or View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN
-                // Hide the nav bar and status bar
-                or View.SYSTEM_UI_FLAG_HIDE_NAVIGATION
-                or View.SYSTEM_UI_FLAG_FULLSCREEN)
+    fun updateLayout() {
+        root!!.removeAllViewsInLayout()
+
+        root!!.addView(
+            remotePDFViewPager,
+            ConstraintLayout.LayoutParams.MATCH_PARENT, ConstraintLayout.LayoutParams.WRAP_CONTENT
+        )
     }
 
-    // Shows the system bars by removing all the flags
-    // except for the ones that make the content appear under the system bars.
-    private fun showSystemUI() {
-        window.decorView.systemUiVisibility = (View.SYSTEM_UI_FLAG_LAYOUT_STABLE
-                or View.SYSTEM_UI_FLAG_LAYOUT_HIDE_NAVIGATION
-                or View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN)
+    override fun onSuccess(url: String?, destinationPath: String?) {
+        adapter = PDFPagerAdapter(this, FileUtil.extractFileNameFromURL(url))
+        remotePDFViewPager!!.adapter = adapter
+        updateLayout()
     }
+
+    override fun onFailure(e: Exception) {
+        e.printStackTrace()
+    }
+
+    override fun onProgressUpdate(progress: Int, total: Int) {}
 
 }

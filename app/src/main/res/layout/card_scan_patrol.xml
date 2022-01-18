@@ -36,18 +36,19 @@
             android:layout_weight="1.6">
 
             <TextView
+                android:fontFamily="@font/rosarivo"
                 android:textColor="#7A6E02"
                 android:maxLines="1"
                 android:id="@+id/tv_date"
                 android:layout_width="wrap_content"
                 android:layout_height="0dp"
-                android:fontFamily="@font/royalacid"
                 android:layout_weight="0.3"
                 android:text="date"
                 android:layout_marginHorizontal="10dp"/>
 
             <TextView
                 android:maxLines="1"
+                android:fontFamily="@font/rosarivo"
                 android:id="@+id/tv_key"
                 android:layout_width="match_parent"
                 android:layout_height="0dp"

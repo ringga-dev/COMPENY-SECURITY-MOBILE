@@ -29,14 +29,14 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
-                android:layout_marginBottom="50sp"
-                android:layout_weight="0.2"
+                android:layout_marginBottom="150sp"
+                android:layout_weight="0.7"
                 android:background="@drawable/bg_shape_down" />
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
-                android:layout_marginTop="50sp"
+                android:layout_marginTop="150sp"
                 android:layout_weight="0.7"
                 android:background="@drawable/bg_shape_up" />
         </LinearLayout>
@@ -60,21 +60,14 @@
                 android:id="@+id/barcodeView"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                app:zxing_scanner_layout="@layout/costum_scan"/>
+                app:zxing_scanner_layout="@layout/costum_scan" />
         </androidx.cardview.widget.CardView>
 
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight="1"
+            android:layout_height="wrap_content"
             android:orientation="vertical">
-
-            <androidx.recyclerview.widget.RecyclerView
-                android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:layout_weight="1.7"
-                tools:listitem="@layout/card_scan_patrol" />
 
 
             <LinearLayout
@@ -90,7 +83,7 @@
                     android:layout_weight="0.2"
                     android:background="@drawable/loign_shape"
                     android:padding="5dp"
-                    android:src="@drawable/ic_qrcode"
+                    android:src="@drawable/ic_qrscan"
                     android:text="Scan+" />
 
                 <TextView

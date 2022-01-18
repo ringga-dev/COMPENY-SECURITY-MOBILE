@@ -37,17 +37,18 @@
             android:layout_weight="1.6">
 
             <TextView
+                android:fontFamily="@font/rosarivo"
                 android:textColor="#7A6E02"
                 android:maxLines="1"
                 android:id="@+id/tv_date"
                 android:layout_width="wrap_content"
                 android:layout_height="0dp"
-                android:fontFamily="@font/royalacid"
                 android:layout_weight="0.2"
                 android:text="DateTime"
                 android:layout_marginHorizontal="10dp"/>
 
             <TextView
+                android:fontFamily="@font/rosarivo"
                 android:maxLines="1"
                 android:id="@+id/tv_name"
                 android:layout_width="match_parent"
@@ -59,6 +60,7 @@
                 android:layout_marginHorizontal="10dp"
                 android:textStyle="bold"/>
             <TextView
+                android:fontFamily="@font/rosarivo"
                 android:maxLines="1"
                 android:id="@+id/tv_keperluan"
                 android:layout_width="match_parent"
@@ -78,7 +80,7 @@
                 android:layout_weight="0.2"
                 android:gravity="end"
                 android:text="iduser"
-                android:fontFamily="@font/royalacid"
+                android:fontFamily="@font/neon"
                 android:layout_marginHorizontal="10dp"/>
 
         </LinearLayout>

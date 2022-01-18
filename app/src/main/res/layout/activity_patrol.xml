@@ -122,7 +122,7 @@
                     android:layout_weight="0.08"
                     android:background="@drawable/loign_shape"
                     android:padding="5dp"
-                    android:src="@drawable/ic_qrcode" />
+                    android:src="@drawable/ic_qrscan" />
 
                 <TextView
                     android:id="@+id/txtResultContinuous"
@@ -134,14 +134,14 @@
                     android:paddingHorizontal="10dp"
                     android:text="..." />
 
-                <ImageView
+                <Button
                     android:id="@+id/btn_kirim"
                     android:layout_width="40dp"
                     android:layout_height="40dp"
+                    android:text="Send"
                     android:layout_weight="0.3"
                     android:background="@drawable/loign_shape"
-                    android:clickable="true"
-                    android:src="@drawable/ic_kirim" />
+                    android:clickable="true"/>
             </LinearLayout>
         </LinearLayout>
     </LinearLayout>

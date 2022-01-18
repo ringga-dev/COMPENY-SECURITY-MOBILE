@@ -13,6 +13,9 @@ import retrofit2.converter.gson.GsonConverterFactory
 object RetrofitClient {
     private val AUTH =
         "Basic " + Base64.encodeToString("ringga:123456".toByteArray(), Base64.NO_WRAP)
+    /**
+     * melakukan koneksi ke url server
+     * */
 //base url di sesuaika dengan alamat dari web server itu sendiri
     const val BASE_URL = "http://192.168.0.223/mobile/public/"
     private val okHttpClient = OkHttpClient.Builder()

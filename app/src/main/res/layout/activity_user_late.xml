@@ -87,7 +87,7 @@
             <ImageView
                 android:id="@+id/iv_calender"
                 android:layout_width="0dp"
-                android:layout_height="wrap_content"
+                android:layout_height="match_parent"
                 android:layout_marginRight="20dp"
                 android:layout_weight="0.4"
                 android:background="@drawable/bg_text"
@@ -99,7 +99,7 @@
             <ImageView
                 android:id="@+id/iv_cari"
                 android:layout_width="0dp"
-                android:layout_height="wrap_content"
+                android:layout_height="match_parent"
                 android:layout_weight="0.4"
                 android:background="@drawable/bg_text"
                 android:fontFamily="@font/royalacid"

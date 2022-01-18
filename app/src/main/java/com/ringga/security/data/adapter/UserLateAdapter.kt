@@ -22,6 +22,9 @@ class UserLateAdapter(
     private var context: Context
 ) : RecyclerView.Adapter<UserLateAdapter.ViewHolder>() {
 
+    /**
+     * file ini berfungsi untuk menampilkan data scan user yang terlambat
+     * */
     fun setWallpapers(r: List<Data>) {
         wallpaper.clear()
         wallpaper.addAll(r)
@@ -43,7 +46,9 @@ class UserLateAdapter(
 
     class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         fun bind(wallpaper: Data, context: Context) {
-
+            /**
+             * logic warna
+             * */
             itemView.tv_date.text = "KEDATANGAN : ${wallpaper.date}"
             itemView.tv_shift.text = "${wallpaper.name}"
             itemView.tv_masuk.text = "Masuk ${wallpaper.masuk} WIB"

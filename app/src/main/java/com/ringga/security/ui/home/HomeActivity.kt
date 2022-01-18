@@ -34,6 +34,9 @@ import com.ringga.security.database.PreferencesToken.Companion.getToken
 import com.ringga.security.database.SharedPrefManager
 import com.ringga.security.ui.auth.LoginActivity
 import com.ringga.security.ui.history.*
+import com.ringga.security.ui.home.fm.EtowaUserFragment
+import com.ringga.security.ui.home.fm.PatrolFragment
+import com.ringga.security.ui.home.fm.VisitorFragment
 import com.ringga.security.ui.patrol.ListPatrolActivity
 import com.ringga.security.ui.profile.EditProfileActivity
 import com.ringga.security.ui.profile.ProfileActivity
@@ -68,137 +71,50 @@ class HomeActivity : AppCompatActivity() {
         setContentView(R.layout.activity_home)
 
 
-        cek_devisi_menu()
-
         val myProfile = SharedPrefManager.getInstance(this)?.user
         val key = getToken(this)
 
         //menu patrol
-        btn_patrol.setOnClickListener {
-            startActivity(Intent(this, PatrolActivity::class.java))
+
+
+        supportFragmentManager.beginTransaction()
+            .replace(R.id.fragment, PatrolFragment.newInstance())
+            .commitNow()
+
+        patrol.setOnClickListener {
+
+            supportFragmentManager.beginTransaction()
+                .replace(R.id.fragment, PatrolFragment.newInstance())
+                .commitNow()
+        }
+        visistor.setOnClickListener {
+            supportFragmentManager.beginTransaction()
+                .replace(R.id.fragment, VisitorFragment.newInstance())
+                .commitNow()
+        }
+        karyawan.setOnClickListener {
+            supportFragmentManager.beginTransaction()
+                .replace(R.id.fragment, EtowaUserFragment.newInstance())
+                .commitNow()
         }
 
 
-        btn_failed_for_finger.setOnClickListener {
-            startActivity(Intent(this,GagalFingerActivity::class.java))
-        }
-
-        user_late.setOnClickListener {
-            startActivity(Intent(this,UserLateActivity::class.java))
-        }
-
-        btn_barcode.setOnClickListener {
-            startActivity(Intent(this,DitailVisitorActivity::class.java))
-        }
-
-        btn_user_late.setOnClickListener {
-            startActivity(Intent(this, DaftarShiftActivity::class.java))
-        }
-
-        tv_list_qrcode.setOnClickListener {
-            startActivity(Intent(this, ListPatrolActivity::class.java))
-        }
-
-        btn_izin.setOnClickListener {
-            startActivity(Intent(this, HistoryVisitorActivity::class.java))
-        }
-
-        btn_history_patrol.setOnClickListener {
-            startActivity(Intent(this, HistoryPatrolActivity::class.java))
-        }
-
-        btn_scan_visitor.setOnClickListener {
-            showCustomAlertVisitor()
-        }
-        btn_pindah.setOnClickListener {
-            startActivity(Intent(this, AbsenScanActivity::class.java))
-//            startActivity(Intent(this, EditProfileActivity::class.java))
-        }
 
 
-        btn_profile.setOnClickListener {
-            startActivity(Intent(this, ProfileActivity::class.java))
-        }
-        btn_history_patrol.setOnClickListener {
-            startActivity(Intent(this, HistoryPatrolActivity::class.java))
-        }
 
-        btn_visit.setOnClickListener {
-            showCustomAlert()
-        }
+
+
+
 
         Log.e(TAG, "Refreshed token: ${getToken(this)}")
         permissionStatus = getSharedPreferences("permissionStatus", Context.MODE_PRIVATE)
         requestPermission()
     }
 
-    private fun showCustomAlert() {
-
-        val inflate = layoutInflater
-        val infla_view = inflate.inflate(R.layout.alert_visit, null)
-        val jadwal_visitor = infla_view.findViewById<CardView>(R.id.btn_jadwal_visitor)
-        val daftar_visitor = infla_view.findViewById<CardView>(R.id.btn_daftar_visitor)
-        val visitor_now = infla_view.findViewById<CardView>(R.id.btn_visitor_now)
-        val cencel = infla_view.findViewById<ImageView>(R.id.btn_cencel)
-        jadwal_visitor.setOnClickListener {
-            startActivity(Intent(this, DaftarVisitorPlanActivity::class.java))
-        }
-
-        daftar_visitor.setOnClickListener {
-            startActivity(Intent(this, DaftarVisitorActivity::class.java))
-        }
-
-        visitor_now.setOnClickListener {
-            startActivity(Intent(this, DaftarVisitorBerjalanActivity::class.java))
-        }
-
-        val alertDialog = AlertDialog.Builder(this)
-        alertDialog.setView(infla_view)
-        alertDialog.setCancelable(false)
 
 
-        val dialog = alertDialog.create()
-        dialog.window?.setBackgroundDrawable(ColorDrawable(Color.TRANSPARENT))
-         cencel.setOnClickListener {
-            dialog.dismiss()
-        }
-        dialog.show()
 
-    }
 
-    private fun showCustomAlertVisitor() {
-
-        val inflate = layoutInflater
-        val infla_view = inflate.inflate(R.layout.custom_alert_visitor, null)
-        val datang = infla_view.findViewById<CardView>(R.id.btn_datang)
-        val pulang = infla_view.findViewById<CardView>(R.id.btn_pulang)
-        val cencel = infla_view.findViewById<ImageView>(R.id.btn_cencel)
-        datang.setOnClickListener {
-            val i = Intent(this, VisitActivity::class.java)
-            i.putExtra("stts", "datang")
-            startActivity(i)
-
-        }
-
-        pulang.setOnClickListener {
-            val i = Intent(this, VisitActivity::class.java)
-            i.putExtra("stts", "pulang")
-            startActivity(i)
-
-        }
-
-        val alertDialog = AlertDialog.Builder(this)
-        alertDialog.setView(infla_view)
-        alertDialog.setCancelable(false)
-
-        val dialog = alertDialog.create()
-        dialog.window?.setBackgroundDrawable(ColorDrawable(Color.TRANSPARENT))
-        cencel.setOnClickListener {
-            dialog.dismiss()
-        }
-        dialog.show()
-
-    }
 
     private fun requestPermission() {
         if (ActivityCompat.checkSelfPermission(
@@ -282,8 +198,7 @@ class HomeActivity : AppCompatActivity() {
             }
 
             if (allgranted) {
-//                Toast.makeText(applicationContext, "Allowed All Permissions", Toast.LENGTH_LONG)
-//                    .show()
+
 
                 showAlertSuccess()
 
@@ -343,9 +258,7 @@ class HomeActivity : AppCompatActivity() {
                     permissionsRequired[0]
                 ) == PackageManager.PERMISSION_GRANTED
             ) {
-                //Got Permission
-//                Toast.makeText(applicationContext, "Allowed All Permissions", Toast.LENGTH_LONG)
-//                    .show()
+
             }
         }
     }
@@ -354,14 +267,6 @@ class HomeActivity : AppCompatActivity() {
 
 
 
-    private fun cek_devisi_menu(){
-        val myProfile = SharedPrefManager.getInstance(this)?.user
-        if(myProfile?.devisi != "security"){
-            layar1.visibility =View.GONE
-            layar2.visibility =View.GONE
-            layar3.visibility =View.GONE
-        }
-    }
 
     override fun onResume() {
         super.onResume()

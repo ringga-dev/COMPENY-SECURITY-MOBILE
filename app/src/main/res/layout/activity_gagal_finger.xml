@@ -172,7 +172,7 @@
                 android:layout_weight="0.08"
                 android:background="@drawable/loign_shape"
                 android:padding="5dp"
-                android:src="@drawable/ic_qrcode"
+                android:src="@drawable/ic_qrscan"
                 android:text="Scan+" />
 
             <TextView

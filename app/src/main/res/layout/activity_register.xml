@@ -11,7 +11,6 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/index"
     android:gravity="center"
     android:orientation="vertical"
     tools:context=".ui.auth.RegisterActivity">
@@ -32,7 +31,6 @@
                 android:layout_marginHorizontal="20dp"
                 android:layout_width="match_parent"
                 android:layout_height="100dp"
-                android:background="@drawable/logo_shape"
                 android:padding="10dp"
                 android:src="@drawable/logo_etowa_rbg" />
 
@@ -50,16 +48,16 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_margin="15dp"
-                    app:cardBackgroundColor="@color/teal_200"
                     app:cardCornerRadius="20dp">
 
                     <TextView
+                        android:padding="10sp"
                         android:layout_marginTop="5dp"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:background="#00FF0000"
                         android:elevation="15dp"
-                        android:fontFamily="@font/royalacid"
+                        android:fontFamily="@font/neon"
                         android:text="@string/register"
                         android:textAlignment="center"
                         android:textColor="@color/black"
@@ -84,7 +82,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:ems="10"
-                        android:fontFamily="@font/the_meshroom_regular"
+                        android:fontFamily="@font/neon"
                         android:inputType="text"
                         android:maxLines="1" />
                 </com.google.android.material.textfield.TextInputLayout>
@@ -105,7 +103,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:ems="10"
-                        android:fontFamily="@font/the_meshroom_regular"
+                        android:fontFamily="@font/neon"
                         android:inputType="text"
                         android:maxLines="1" />
                 </com.google.android.material.textfield.TextInputLayout>
@@ -126,7 +124,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:ems="10"
-                        android:fontFamily="@font/the_meshroom_regular"
+                        android:fontFamily="@font/neon"
                         android:inputType="phone"
                         android:maxLines="1" />
                 </com.google.android.material.textfield.TextInputLayout>
@@ -168,7 +166,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:ems="10"
-                        android:fontFamily="@font/the_meshroom_regular"
+                        android:fontFamily="@font/neon"
                         android:inputType="textEmailAddress"
                         android:maxLines="1" />
                 </com.google.android.material.textfield.TextInputLayout>
@@ -190,7 +188,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:ems="10"
-                        android:fontFamily="@font/the_meshroom_regular"
+                        android:fontFamily="@font/neon"
                         android:inputType="textPassword"
                         android:maxLines="1" />
                 </com.google.android.material.textfield.TextInputLayout>
@@ -203,19 +201,16 @@
                     android:padding="10dp">
 
 
-                    <ImageView
+                    <Button
                         android:id="@+id/btn_registe"
-                        android:layout_width="50dp"
-                        android:layout_height="50dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
                         android:layout_margin="5dp"
                         android:background="@drawable/loign_shape"
                         android:paddingHorizontal="3dp"
-                        android:src="@drawable/ic_singin"
-                        android:text="@string/login"
-                        android:textColor="@color/purple_500"
-                        android:textSize="15sp"
-                        android:textStyle="bold"
-                        app:backgroundTint="@null" />
+                        android:text="Register"
+                        android:textSize="25sp"
+                        android:textStyle="bold" />
 
                 </LinearLayout>
             </LinearLayout>
@@ -227,8 +222,8 @@
                 android:layout_gravity="end"
                 android:layout_marginEnd="30dp"
                 android:fontFamily="@font/balbaleo"
-                android:text="Back to Login Page"
-                android:textColor="@color/purple_500" />
+                android:text="Login Page"
+                android:textColor="@color/black" />
         </LinearLayout>
     </androidx.core.widget.NestedScrollView>
 

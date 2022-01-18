@@ -38,7 +38,7 @@
             android:textSize="30sp"
             android:textColor="#FF0000"
             android:textStyle="bold"
-            android:text="Wellcome to Etowa Mobile"
+            android:text="Welcome to Etowa Mobile"
             android:gravity="center"/>
 
     </LinearLayout>

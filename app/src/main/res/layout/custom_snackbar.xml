@@ -27,8 +27,8 @@
                     android:layout_gravity="center"
                     android:text="err"
                     android:textSize="25sp"
-                    android:textColor="@color/teal_200"
-                    android:fontFamily="@font/royalacid"/>
+                    android:fontFamily="@font/neon"
+                    android:textColor="@color/teal_200"/>
             </LinearLayout>
 
             <View
@@ -44,9 +44,9 @@
                 android:textSize="20sp"
                 android:textColor="#000000"
                 android:text="ULANG"
+                android:fontFamily="@font/neon"
                 android:gravity="center"
                 android:layout_marginEnd="5sp"
-                android:fontFamily="@font/moyko"
                 android:textStyle="bold"/>
         </LinearLayout>
 

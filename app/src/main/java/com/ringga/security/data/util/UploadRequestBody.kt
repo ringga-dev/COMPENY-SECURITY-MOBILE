@@ -13,6 +13,10 @@ class UploadRequestBody(
         private val contentType: String
 ) : RequestBody() {
 
+    /**
+     * file ini berfungsi untuk validasi file dari internal memory
+     * */
+
     override fun contentType() = MediaType.parse("$contentType/*")
 
     override fun contentLength() = file.length()

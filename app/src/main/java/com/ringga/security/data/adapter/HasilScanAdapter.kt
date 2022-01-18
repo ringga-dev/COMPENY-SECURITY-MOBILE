@@ -25,12 +25,18 @@ class HasilScanAdapter(
     private var context: Context
 ) : RecyclerView.Adapter<HasilScanAdapter.ViewHolder>() {
 
+
+    /**
+     * file ini berfungsi untuk menampilkan data scan user
+     * */
     fun setWallpapers(r: List<ScanPatrol>) {
         wallpaper.clear()
         wallpaper.addAll(r)
         notifyDataSetChanged()
     }
-
+    /**
+     * membangun ui grup
+     * */
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         return ViewHolder(
             LayoutInflater.from(parent.context)
@@ -38,12 +44,17 @@ class HasilScanAdapter(
         )
     }
 
+    /**
+     * menyimpan posisi data
+     * */
     override fun onBindViewHolder(holder: ViewHolder, position: Int) =
         holder.bind(wallpaper[position], context)
 
     override fun getItemCount() = wallpaper.size
 
-
+    /**
+     * menampilkan data
+     * */
     class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         fun bind(wallpaper: ScanPatrol, context: Context) {
 

@@ -20,6 +20,9 @@ import retrofit2.Call
 import retrofit2.http.*
 
 interface Api {
+    /**
+     * file ini berfungsi untuk menyimpan semua enpoin dari api
+     * */
 
     //login
     @FormUrlEncoded
@@ -27,6 +30,12 @@ interface Api {
     fun login(
         @Field("email") email: String,
         @Field("password") password: String
+    ): Call<LoginRespon>
+
+    @FormUrlEncoded
+    @POST("UserApi/login_bet")
+    fun loginScan(
+        @Field("id_bet") bet_id: String
     ): Call<LoginRespon>
 
     //register
@@ -125,6 +134,7 @@ interface Api {
         @Field("token") token: String,
         @Field("id") id: String,
         @Field("bet") bet: String,
+        @Field("remarks") remarks: String,
         @Field("dari") dari: String,
         @Field("menuju") menuju: String,
         @Field("stts") stts: String,

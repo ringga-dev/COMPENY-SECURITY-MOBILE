@@ -6,39 +6,6 @@
     android:layout_height="match_parent"
     tools:context=".ui.scan.AbsenScanActivity">
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical"
-        tools:ignore="MissingConstraints">
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight="0.2"
-            android:orientation="vertical">
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:layout_marginBottom="10sp"
-                android:layout_weight="0.5"
-                android:background="@drawable/bg_shape_down" />
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:layout_marginTop="10sp"
-                android:layout_weight="0.5"
-                android:background="@drawable/bg_shape_up" />
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight="0.7"
-            android:background="@drawable/bg_shape_center" />
-    </LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -80,7 +47,7 @@
                     android:layout_weight="0.2"
                     android:background="@drawable/loign_shape"
                     android:padding="5dp"
-                    android:src="@drawable/ic_qrcode"
+                    android:src="@drawable/ic_qrscan"
                     android:text="Scan+" />
 
                 <TextView
@@ -88,7 +55,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:layout_weight="0.8"
-                    android:background="@drawable/bg_text"
+                    android:background="@drawable/loign_shape"
                     android:gravity="center"
                     android:paddingHorizontal="10dp"
                     android:text="..." />

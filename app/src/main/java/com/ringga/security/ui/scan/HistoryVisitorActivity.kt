@@ -26,8 +26,10 @@ import com.ringga.security.data.api.RetrofitClient
 import com.ringga.security.data.model.auth.BaseRespon
 import com.ringga.security.database.PreferencesToken
 import com.ringga.security.database.SharedPrefManager
+import com.ringga.security.util.toast
 import kotlinx.android.synthetic.main.activity_history_visitor.*
 import kotlinx.android.synthetic.main.costum_scan.*
+import kotlinx.android.synthetic.main.custom_snackbar.view.*
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
@@ -45,12 +47,12 @@ class HistoryVisitorActivity : AppCompatActivity() {
 
     //data
     private var stts: String? = null
+    private var lot: String? = null
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_history_visitor)
-
 
         rg_stts.setOnCheckedChangeListener { group, checkedId ->
             when (checkedId) {
@@ -66,6 +68,17 @@ class HistoryVisitorActivity : AppCompatActivity() {
                 }
             }
         }
+        dari.setOnCheckedChangeListener { group, checkedId ->
+            when (checkedId) {
+                R.id.lot_1 -> {
+                    lot = "Lot 1"
+                }
+                R.id.lot_7 -> {
+                    lot = "Lot 7"
+                }
+            }
+        }
+
 
         btn_set.setOnClickListener {
             viewScan.visibility = View.VISIBLE
@@ -170,12 +183,12 @@ class HistoryVisitorActivity : AppCompatActivity() {
     private fun send(bet: String) {
         val myProfile = SharedPrefManager.getInstance(this)?.user
         if (stts == "keluar") {
-            val dari = ed_dari.text.toString().trim()
+            val dari = lot
             val menuju = ed_menuju.text.toString().trim()
+            val remarks = ed_remarks.text.toString().trim()
 
-            if (dari.isEmpty()) {
-                ed_dari.error = "Ini harus di isi"
-                ed_dari.requestFocus()
+            if (dari == null) {
+                toast(this ,"Masih ada data yang kosong .. ")
                 return
             }
             if (menuju.isEmpty()) {
@@ -183,8 +196,13 @@ class HistoryVisitorActivity : AppCompatActivity() {
                 ed_menuju.requestFocus()
                 return
             }
+            if(remarks.isEmpty()){
+                ed_remarks.error = "Ini harus di isi"
+                ed_remarks.requestFocus()
+                return
+            }
 
-            RetrofitClient.instance.user_izin(PreferencesToken.getToken(this)!!, myProfile?.id.toString(), bet, dari, menuju, stts!!)
+            RetrofitClient.instance.user_izin(PreferencesToken.getToken(this)!!, myProfile?.id.toString(), bet,remarks, dari, menuju, stts!!)
                 .enqueue(object :Callback<BaseRespon>{
                     override fun onResponse(
                         call: Call<BaseRespon>,
@@ -198,7 +216,7 @@ class HistoryVisitorActivity : AppCompatActivity() {
                     }
                 })
         }else{
-            RetrofitClient.instance.user_izin(PreferencesToken.getToken(this)!!, myProfile?.id.toString(), bet, " ", " ", stts!!)
+            RetrofitClient.instance.user_izin(PreferencesToken.getToken(this)!!, myProfile?.id.toString(), bet, "","", "", stts!!)
                 .enqueue(object :Callback<BaseRespon>{
                     override fun onResponse(
                         call: Call<BaseRespon>,

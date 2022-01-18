@@ -22,6 +22,9 @@ class QrLocationAdapter(
     private var context: Context
 ) : RecyclerView.Adapter<QrLocationAdapter.ViewHolder>() {
 
+    /**
+     * file ini berfungsi untuk menampilkan data lokasi qr code
+     * */
     fun setWallpapers(r: List<Data>) {
         wallpaper.clear()
         wallpaper.addAll(r)

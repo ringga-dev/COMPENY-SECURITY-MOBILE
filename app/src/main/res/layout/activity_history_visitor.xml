@@ -108,51 +108,99 @@
                     </LinearLayout>
 
 
-                    <com.google.android.material.textfield.TextInputLayout
+
+
+                    <LinearLayout
                         android:id="@+id/tf_dari"
-                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
                         android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:layout_marginLeft="15dp"
-                        android:layout_marginTop="5dp"
-                        android:layout_marginRight="15dp"
-                        android:layout_marginBottom="5dp"
-                        android:hint="Dari"
-                        android:textColorHint="@color/black"
-                        android:visibility="gone">
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="15dp"
+                        android:layout_marginVertical="10dp"
+                        android:background="@drawable/bg_card"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:visibility="gone"
+                        android:padding="15dp">
 
-                        <com.google.android.material.textfield.TextInputEditText
-                            android:id="@+id/ed_dari"
+                        <TextView
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:ems="10"
-                            android:fontFamily="@font/the_meshroom_regular"
-                            android:inputType="text"
-                            android:maxLines="1" />
-                    </com.google.android.material.textfield.TextInputLayout>
-
-                    <com.google.android.material.textfield.TextInputLayout
-                        android:id="@+id/tf_menuju"
-                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:layout_marginLeft="15dp"
-                        android:layout_marginTop="5dp"
-                        android:layout_marginRight="15dp"
-                        android:layout_marginBottom="5dp"
-                        android:hint="Menuju"
-                        android:textColorHint="@color/black"
-                        android:visibility="gone">
-
-                        <com.google.android.material.textfield.TextInputEditText
-                            android:id="@+id/ed_menuju"
+                            android:textSize="25sp"
+                            android:text="Dari"
+                            android:fontFamily="@font/neon"
+                            android:textColor="@color/red"/>
+                        <RadioGroup
+                            android:id="@+id/dari"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:ems="10"
-                            android:fontFamily="@font/the_meshroom_regular"
-                            android:inputType="text"
-                            android:maxLines="1" />
-                    </com.google.android.material.textfield.TextInputLayout>
+                            android:padding="5dp"
+                            android:scrollbarSize="25dp">
+
+                            <RadioButton
+                                android:id="@+id/lot_1"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/cherry_cream_soda"
+                                android:text="Lot 1"
+                                android:textSize="20dp" />
+
+                            <RadioButton
+                                android:id="@+id/lot_7"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/cherry_cream_soda"
+                                android:text="Lot 7"
+                                android:textSize="20dp" />
+                        </RadioGroup>
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:id="@+id/tf_menuju"
+                            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="15dp"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginRight="15dp"
+                            android:layout_marginBottom="5dp"
+                            android:hint="Menuju"
+                            android:textColorHint="@color/black"
+                            android:visibility="gone">
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/ed_menuju"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:ems="10"
+                                android:fontFamily="@font/neon"
+                                android:inputType="text"
+                                android:maxLines="1" />
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:id="@+id/tf_remarks"
+                            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="15dp"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginRight="15dp"
+                            android:layout_marginBottom="5dp"
+                            android:hint="Remarks"
+                            android:textColorHint="@color/black"
+                            android:visibility="visible">
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/ed_remarks"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:ems="10"
+                                android:fontFamily="@font/neon"
+                                android:inputType="text"
+                                android:maxLines="1" />
+                        </com.google.android.material.textfield.TextInputLayout>
+
+
+                    </LinearLayout>
 
 
                     <LinearLayout
@@ -191,7 +239,7 @@
                 android:layout_weight="0.08"
                 android:background="@drawable/loign_shape"
                 android:padding="5dp"
-                android:src="@drawable/ic_qrcode"
+                android:src="@drawable/ic_qrscan"
                 android:text="Scan+" />
 
             <TextView

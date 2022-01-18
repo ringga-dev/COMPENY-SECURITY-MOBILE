@@ -39,15 +39,15 @@
             android:orientation="horizontal">
             <ImageView
                 android:layout_weight="0.5"
-                android:src="@drawable/visitor"
+                android:src="@drawable/ic_visitor"
                 android:layout_width="0dp"
                 android:layout_height="80dp"/>
 
             <TextView
                 android:text="Jadwal Visitor Masuk"
-                android:textSize="30sp"
+                android:textSize="20sp"
                 android:gravity="center"
-                android:fontFamily="@font/royalacid"
+                android:fontFamily="@font/rosarivo"
                 android:layout_width="0dp"
                 android:layout_height="80dp"
                 android:layout_weight="1.5"/>
@@ -71,15 +71,15 @@
             android:orientation="horizontal">
             <ImageView
                 android:layout_weight="0.5"
-                android:src="@drawable/visitors"
+                android:src="@drawable/ic_izin"
                 android:layout_width="0dp"
                 android:layout_height="80dp"/>
 
             <TextView
                 android:text="Daftar Visitor Selesai"
-                android:textSize="30sp"
+                android:textSize="20sp"
                 android:gravity="center"
-                android:fontFamily="@font/royalacid"
+                android:fontFamily="@font/rosarivo"
                 android:layout_width="0dp"
                 android:layout_height="80dp"
                 android:layout_weight="1.5"/>
@@ -104,15 +104,15 @@
             android:orientation="horizontal">
             <ImageView
                 android:layout_weight="0.5"
-                android:src="@drawable/visitor_jadwal"
+                android:src="@drawable/ic_list"
                 android:layout_width="0dp"
                 android:layout_height="80dp"/>
 
             <TextView
                 android:text="Visitor Sedang Di Dalam"
-                android:textSize="25sp"
+                android:textSize="20sp"
                 android:gravity="center"
-                android:fontFamily="@font/royalacid"
+                android:fontFamily="@font/rosarivo"
                 android:layout_width="0dp"
                 android:layout_height="80dp"
                 android:layout_weight="1.5"/>

@@ -16,8 +16,13 @@
         <entry key="..\:/project/SECURITY/app/src/main/res/drawable/bg_shape_down.xml" value="0.18055555555555555" />
         <entry key="..\:/project/SECURITY/app/src/main/res/drawable/bg_shape_up.xml" value="0.18055555555555555" />
         <entry key="..\:/project/SECURITY/app/src/main/res/drawable/bg_text.xml" value="0.25" />
+        <entry key="..\:/project/SECURITY/app/src/main/res/drawable/ic_back.xml" value="0.30153846153846153" />
+        <entry key="..\:/project/SECURITY/app/src/main/res/drawable/ic_calender.xml" value="0.30153846153846153" />
+        <entry key="..\:/project/SECURITY/app/src/main/res/drawable/ic_cari.xml" value="0.30153846153846153" />
+        <entry key="..\:/project/SECURITY/app/src/main/res/drawable/ic_cencel.xml" value="0.30153846153846153" />
         <entry key="..\:/project/SECURITY/app/src/main/res/drawable/ic_close.xml" value="0.2953703703703704" />
         <entry key="..\:/project/SECURITY/app/src/main/res/drawable/ic_edit.xml" value="0.2953703703703704" />
+        <entry key="..\:/project/SECURITY/app/src/main/res/drawable/ic_fingerprint.xml" value="0.3333333333333333" />
         <entry key="..\:/project/SECURITY/app/src/main/res/drawable/ic_flash_on.xml" value="0.2953703703703704" />
         <entry key="..\:/project/SECURITY/app/src/main/res/drawable/ic_launcher_background.xml" value="0.2953703703703704" />
         <entry key="..\:/project/SECURITY/app/src/main/res/drawable/ic_logout.xml" value="0.2953703703703704" />
@@ -30,7 +35,7 @@
         <entry key="..\:/project/SECURITY/app/src/main/res/drawable/splash_background.xml" value="0.22" />
         <entry key="..\:/project/SECURITY/app/src/main/res/drawable/splash_fg.xml" value="0.22" />
         <entry key="..\:/project/SECURITY/app/src/main/res/layout/activity_absen_scan.xml" value="0.25" />
-        <entry key="..\:/project/SECURITY/app/src/main/res/layout/activity_daftar_shift.xml" value="0.16" />
+        <entry key="..\:/project/SECURITY/app/src/main/res/layout/activity_daftar_shift.xml" value="0.25" />
         <entry key="..\:/project/SECURITY/app/src/main/res/layout/activity_daftar_visitor.xml" value="0.25101351351351353" />
         <entry key="..\:/project/SECURITY/app/src/main/res/layout/activity_daftar_visitor_berjalan.xml" value="0.12972972972972974" />
         <entry key="..\:/project/SECURITY/app/src/main/res/layout/activity_daftar_visitor_plan.xml" value="0.25101351351351353" />
@@ -39,29 +44,31 @@
         <entry key="..\:/project/SECURITY/app/src/main/res/layout/activity_edit_profile.xml" value="0.25101351351351353" />
         <entry key="..\:/project/SECURITY/app/src/main/res/layout/activity_gagal_finger.xml" value="0.25" />
         <entry key="..\:/project/SECURITY/app/src/main/res/layout/activity_history_patrol.xml" value="0.22" />
-        <entry key="..\:/project/SECURITY/app/src/main/res/layout/activity_history_visitor.xml" value="0.14" />
-        <entry key="..\:/project/SECURITY/app/src/main/res/layout/activity_home.xml" value="0.22" />
+        <entry key="..\:/project/SECURITY/app/src/main/res/layout/activity_history_visitor.xml" value="0.33" />
+        <entry key="..\:/project/SECURITY/app/src/main/res/layout/activity_home.xml" value="0.25" />
         <entry key="..\:/project/SECURITY/app/src/main/res/layout/activity_list_patrol.xml" value="0.25101351351351353" />
         <entry key="..\:/project/SECURITY/app/src/main/res/layout/activity_login.xml" value="0.33" />
         <entry key="..\:/project/SECURITY/app/src/main/res/layout/activity_main.xml" value="0.25" />
         <entry key="..\:/project/SECURITY/app/src/main/res/layout/activity_patrol.xml" value="0.22" />
-        <entry key="..\:/project/SECURITY/app/src/main/res/layout/activity_profile.xml" value="0.2" />
+        <entry key="..\:/project/SECURITY/app/src/main/res/layout/activity_profile.xml" value="0.33" />
         <entry key="..\:/project/SECURITY/app/src/main/res/layout/activity_qr_location.xml" value="0.25101351351351353" />
         <entry key="..\:/project/SECURITY/app/src/main/res/layout/activity_register.xml" value="0.22" />
         <entry key="..\:/project/SECURITY/app/src/main/res/layout/activity_room.xml" value="0.38697916666666665" />
-        <entry key="..\:/project/SECURITY/app/src/main/res/layout/activity_scan_login.xml" value="0.38697916666666665" />
+        <entry key="..\:/project/SECURITY/app/src/main/res/layout/activity_scan_login.xml" value="0.25" />
         <entry key="..\:/project/SECURITY/app/src/main/res/layout/activity_scan_user_hadir.xml" value="0.38697916666666665" />
         <entry key="..\:/project/SECURITY/app/src/main/res/layout/activity_shift_scan.xml" value="0.33" />
         <entry key="..\:/project/SECURITY/app/src/main/res/layout/activity_skema_satu.xml" value="0.18" />
         <entry key="..\:/project/SECURITY/app/src/main/res/layout/activity_user_late.xml" value="0.33" />
         <entry key="..\:/project/SECURITY/app/src/main/res/layout/activity_vidio_view.xml" value="0.25101351351351353" />
         <entry key="..\:/project/SECURITY/app/src/main/res/layout/activity_visit.xml" value="0.2" />
+        <entry key="..\:/project/SECURITY/app/src/main/res/layout/activity_visit_grup.xml" value="0.25" />
         <entry key="..\:/project/SECURITY/app/src/main/res/layout/alert_visit.xml" value="0.33" />
+        <entry key="..\:/project/SECURITY/app/src/main/res/layout/bg_apps.xml" value="0.38697916666666665" />
         <entry key="..\:/project/SECURITY/app/src/main/res/layout/card_list_patrol.xml" value="0.22" />
         <entry key="..\:/project/SECURITY/app/src/main/res/layout/card_list_qr_location.xml" value="0.25101351351351353" />
         <entry key="..\:/project/SECURITY/app/src/main/res/layout/card_list_shift.xml" value="0.25101351351351353" />
         <entry key="..\:/project/SECURITY/app/src/main/res/layout/card_list_visitor.xml" value="0.25" />
-        <entry key="..\:/project/SECURITY/app/src/main/res/layout/card_scan_patrol.xml" value="0.58046875" />
+        <entry key="..\:/project/SECURITY/app/src/main/res/layout/card_scan_patrol.xml" value="0.5" />
         <entry key="..\:/project/SECURITY/app/src/main/res/layout/card_user_late.xml" value="0.38697916666666665" />
         <entry key="..\:/project/SECURITY/app/src/main/res/layout/costum_scan.xml" value="0.2" />
         <entry key="..\:/project/SECURITY/app/src/main/res/layout/custom_alert.xml" value="0.14189189189189189" />
@@ -71,6 +78,9 @@
         <entry key="..\:/project/SECURITY/app/src/main/res/layout/custom_snackbar.xml" value="0.25" />
         <entry key="..\:/project/SECURITY/app/src/main/res/layout/custom_toals_error.xml" value="0.25" />
         <entry key="..\:/project/SECURITY/app/src/main/res/layout/custom_toals_ok.xml" value="0.25" />
+        <entry key="..\:/project/SECURITY/app/src/main/res/layout/fragment_etowa_user.xml" value="0.25" />
+        <entry key="..\:/project/SECURITY/app/src/main/res/layout/fragment_patrol.xml" value="0.25" />
+        <entry key="..\:/project/SECURITY/app/src/main/res/layout/fragment_visitor.xml" value="0.25" />
         <entry key="..\:/project/SECURITY/app/src/main/res/layout/spinner_right_aligned.xml" value="0.5" />
         <entry key="..\:/project/SECURITY/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.2588628762541806" />
       </map>

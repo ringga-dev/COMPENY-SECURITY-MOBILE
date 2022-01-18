@@ -42,32 +42,7 @@ class RegisterActivity : AppCompatActivity() {
             finish()
         }
 
-//        val requestQueue = Volley.newRequestQueue(this)
-//        val url = "http://risma-project.xyz/api/GetKabupaten"
-//        val jsonObjectRequest = JsonObjectRequest(
-//            Request.Method.POST,
-//            url, null, { response ->
-//                try {
-//                    val jsonArray = response.getJSONArray("data")
-//                    for (i in 0 until jsonArray.length()) {
-//                        val jsonObject = jsonArray.getJSONObject(i)
-//                        val kabupaten = jsonObject.optString("nama")
-//                        val idKabupaten = jsonObject.optInt("id_kab")
-//                        kabupatenList.add(kabupaten)
-//                        kebupatenAdapter = ArrayAdapter(this, android.R.layout.simple_spinner_item, kabupatenList)
-//                        kebupatenAdapter!!.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
-//                        spiner_kabupaten.setAdapter(kebupatenAdapter)
-//                    }
-//
-//                } catch (e: JSONException) {
-//                    e.printStackTrace()
-//                }
-//            }) {
-//            Toast.makeText(this, "data error", Toast.LENGTH_LONG).show()
-//        }
-//        requestQueue?.run {
-//            add(jsonObjectRequest)
-//        }
+
 
         btn_registe.setOnClickListener {
             loading.visibility= View.VISIBLE
@@ -85,12 +60,6 @@ class RegisterActivity : AppCompatActivity() {
                 return@setOnClickListener
             }
 
-//            if (devisi.isEmpty()) {
-//                loading.visibility= View.GONE
-//                ed_devisi.error = "Email required"
-//                ed_devisi.requestFocus()
-//                return@setOnClickListener
-//            }
 
             if (name.isEmpty()) {
                 loading.visibility= View.GONE

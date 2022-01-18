@@ -1,7 +1,7 @@
 package com.ringga.security.ui.auth
 /*=================== T H A N K   Y O U ===================*/
 /*============= TELAH MENGUNAKAN CODE SAYA ================*/
-            /* https://github.com/ringga-dev */
+/* https://github.com/ringga-dev */
 /*=========================================================*/
 /*     R I N G G A   S E P T I A  P R I B A D I            */
 /*=========================================================*/
@@ -42,33 +42,47 @@ import java.util.regex.Pattern
 
 class LoginActivity : AppCompatActivity() {
 
-
+    /**
+     * file ini berfungsi untuk melakukan proses login pada perangkat
+     * */
     @RequiresApi(Build.VERSION_CODES.M)
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_login)
 
 
-
-        btn_cek_conetion.setOnClickListener {view ->
-            val ConnectionManager = getSystemService(Context.CONNECTIVITY_SERVICE) as ConnectivityManager
+        /**
+         * melakukan pengecekan koneksi ke server
+         * */
+        btn_cek_conetion.setOnClickListener { view ->
+            val ConnectionManager =
+                getSystemService(Context.CONNECTIVITY_SERVICE) as ConnectivityManager
             val networkInfo = ConnectionManager.activeNetworkInfo
             if (networkInfo != null && networkInfo.isConnected) {
                 Toast.makeText(this@LoginActivity, "Network Available", Toast.LENGTH_LONG).show()
                 Handler().postDelayed({
-                    val cm = applicationContext.getSystemService(Context.CONNECTIVITY_SERVICE) as ConnectivityManager
+                    val cm =
+                        applicationContext.getSystemService(Context.CONNECTIVITY_SERVICE) as ConnectivityManager
                     // Network Capabilities of Active Network
                     val nc = cm.getNetworkCapabilities(cm.activeNetwork)
                     // DownSpeed in MBPS
-                    val downSpeed = (nc?.linkDownstreamBandwidthKbps)!!/1000
+                    val downSpeed = (nc?.linkDownstreamBandwidthKbps)!! / 1000
                     // UpSpeed  in MBPS
-                    val upSpeed = (nc.linkUpstreamBandwidthKbps)/1000
+                    val upSpeed = (nc.linkUpstreamBandwidthKbps) / 1000
                     // Toast to Display DownSpeed and UpSpeed
                     snackbar("Up Speed: $upSpeed Mbps \nDown Speed: $downSpeed Mbps", view)
                 }, 2000)
             } else {
                 snackbar("Network Not Available", view)
             }
+        }
+
+        /**
+         * fingsi timbol
+         * */
+        tv_scan_login.setOnClickListener {
+            startActivity(Intent(this, ScanLoginActivity::class.java))
+            finish()
         }
 
         tv_register.setOnClickListener {
@@ -83,6 +97,9 @@ class LoginActivity : AppCompatActivity() {
             startActivity(intent)
         }
 
+        /**
+         * fungsi login
+         * */
         loginBtn.setOnClickListener {
             loading.visibility = View.VISIBLE
             val email = ed_mail.text.toString().trim()
@@ -110,7 +127,9 @@ class LoginActivity : AppCompatActivity() {
             login(email, password, it)
         }
     }
-
+    /**
+     * pengecekan ke server
+     * */
     private fun login(email: String, password: String, view: View) {
 
         RetrofitClient.instance.login(email, password)
@@ -132,7 +151,7 @@ class LoginActivity : AppCompatActivity() {
                             finish()
                         }
                     } else {
-                        snackbar(  response.body()?.msg.toString(), view)
+                        snackbar(response.body()?.msg.toString(), view)
                     }
                     loading.visibility = View.GONE
                 }
@@ -161,40 +180,34 @@ class LoginActivity : AppCompatActivity() {
     }
 
 
-    private fun alert() {
-        val layoutInflater: LayoutInflater = layoutInflater
-        val view = layoutInflater.inflate(R.layout.custom_alert, findViewById(R.id.alert_custom))
-        val custom_toast = Toast.makeText(this, "Toast:Gravity.Top", Toast.LENGTH_SHORT)
-        custom_toast.setGravity(Gravity.CENTER, 0, 0)
-        custom_toast.view = view
-        custom_toast.show()
-    }
-
-
-
     override fun onStart() {
         super.onStart()
 
         if (SharedPrefManager.getInstance(this)!!.isLoggedIn) {
             RetrofitClient.instance.cekTokenApp(getToken(this)!!)
-                .enqueue(object : Callback<BaseRespon>{
+                .enqueue(object : Callback<BaseRespon> {
                     override fun onResponse(
                         call: Call<BaseRespon>,
                         response: Response<BaseRespon>
                     ) {
-                      if (response.body()?.stts == true){
-                          val intent = Intent(applicationContext, HomeActivity::class.java)
-                          intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
+                        if (response.body()?.stts == true) {
+                            val intent = Intent(applicationContext, HomeActivity::class.java)
+                            intent.flags =
+                                Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
 
-                          startActivity(intent)
-                          finish()
-                      }else{
-                          Toast.makeText(this@LoginActivity, response.body()?.msg, Toast.LENGTH_SHORT).show()
-                          SharedPrefManager.getInstance(this@LoginActivity)!!.clear()
-                          ClearToken(this@LoginActivity)
-                          startActivity(Intent(baseContext, LoginActivity::class.java))
-                          finish()
-                      }
+                            startActivity(intent)
+                            finish()
+                        } else {
+                            Toast.makeText(
+                                this@LoginActivity,
+                                response.body()?.msg,
+                                Toast.LENGTH_SHORT
+                            ).show()
+                            SharedPrefManager.getInstance(this@LoginActivity)!!.clear()
+                            ClearToken(this@LoginActivity)
+                            startActivity(Intent(baseContext, LoginActivity::class.java))
+                            finish()
+                        }
                     }
 
                     override fun onFailure(call: Call<BaseRespon>, t: Throwable) {

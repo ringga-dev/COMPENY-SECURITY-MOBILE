@@ -35,48 +35,20 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        github_icon.setOnClickListener {
-            val openURL = Intent(Intent.ACTION_VIEW)
-            openURL.data = Uri.parse("https://github.com/ringga-dev")
-            startActivity(openURL)
-        }
+
     }
 
     override fun onStart() {
         super.onStart()
         Handler().postDelayed({
             if (SharedPrefManager.getInstance(this)!!.isLoggedIn) {
+                val intent = Intent(applicationContext, HomeActivity::class.java)
+                intent.flags =
+                    Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
 
-                RetrofitClient.instance.cekTokenApp(PreferencesToken.getToken(this)!!)
-                    .enqueue(object : Callback<BaseRespon> {
-                        override fun onResponse(
-                            call: Call<BaseRespon>,
-                            response: Response<BaseRespon>
-                        ) {
-                            if (response.body()?.stts == true) {
-                                val intent = Intent(applicationContext, HomeActivity::class.java)
-                                intent.flags =
-                                    Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
+                startActivity(intent)
+                finish()
 
-                                startActivity(intent)
-                                finish()
-                            } else {
-                                Toast.makeText(
-                                    this@MainActivity,
-                                    response.body()?.msg,
-                                    Toast.LENGTH_SHORT
-                                ).show()
-                                SharedPrefManager.getInstance(this@MainActivity)!!.clear()
-                                PreferencesToken.ClearToken(this@MainActivity)
-                                startActivity(Intent(baseContext, LoginActivity::class.java))
-                                finish()
-                            }
-                        }
-
-                        override fun onFailure(call: Call<BaseRespon>, t: Throwable) {
-                            showSnackBar(t.message!!)
-                        }
-                    })
             } else {
                 startActivity(Intent(baseContext, LoginActivity::class.java))
             }
