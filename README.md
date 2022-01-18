@@ -9,17 +9,7 @@ project di tujukan untuk mempermudah dalam perekapan absen user, dan mempermudah
 app terdiri dari 2 bentuk entitas yaitu apk dan web
 ```
 
-## Configuration
-### Keystores:
-Create `app/keystore.gradle` with the following info:
-```gradle
-ext.key_alias='...'
-ext.key_password='...'
-ext.store_password='...'
-```
-And place both keystores under `app/keystores/` directory:
-- `playstore.keystore`
-- `stage.keystore`
+
 
 
 ## Build variants
@@ -32,9 +22,6 @@ From Android Studio:
 2. ***Generate Signed APK...***
 3. Fill in the keystore information *(you only need to do this once manually and then let Android Studio remember it)*
 
-## Maintainers
-This project is mantained by:
-* [Federico Ramundo](http://github.com/framundo)
 
 
 ## Contributing
